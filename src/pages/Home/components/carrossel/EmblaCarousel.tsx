@@ -39,16 +39,18 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
         <div className="embla__container">
           <div className="embla__slide">
             <div className="embla__slide__number first-slide1 bg-cover bg-no-repeat bg-center">
-              <div className="flex flex-col gap-4 text-white font-Noto z-10 ml-15 w-1/2">
-                <h2 className="text-[2.375rem] leading-none font-bold">
+              <div className="flex flex-col items-center justify-end w-full h-full text-center gap-4 pb-1.5 text-white font-Noto z-10 lg:ml-15 lg:w-1/2 lg:justify-center lg:text-left lg:items-start">
+                <h2 className="text-[1.57rem] lg:text-[2.375rem] leading-8 lg:leading-none font-bold">
                   Descubra os ingredientes para a conexão perfeita:
                 </h2>
                 <div className="font-Noto text-base font-normal">
-                  <p>Latas personalizadas, jogos, músicas e muito mais.</p>
+                  <p className="text-[1.2rem] leading-6 lg:text-[1rem]">
+                    Latas personalizadas, jogos, músicas e muito mais.
+                  </p>
                 </div>
                 <a
                   href="#"
-                  className="w-3/5 text-center bg-white text-black rounded-full shadow px-16 py-2 font-Noto font-bold">
+                  className="w-full lg:w-3/5 text-center bg-white text-black rounded-full shadow px-16 py-2 font-Noto font-bold">
                   Saiba mais
                 </a>
               </div>
@@ -59,20 +61,20 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
           </div>
           <div className="embla__slide ">
             <div className="relative w-full embla__slide__number first-slide2 bg-cover bg-no-repeat bg-center">
-              <div className="flex flex-col gap-4 text-white font-Noto z-10 ml-15 w-1/2">
+              <div className="flex flex-col items-center text-center gap-4 text-white font-Noto z-10 lg:ml-15 w-full lg:w-1/2 lg:text-left lg:items-start">
                 <p className=" uppercase text-sm font-semibold">
                   Sprite E Verão
                 </p>
-                <h2 className="text-4xl font-bold">
+                <h2 className="text-[1.57rem] lg:text-[2.375rem] leading-8 lg:leading-none font-bold">
                   Refresque-se do Calor do Verão
                 </h2>
-                <div className="font-Noto text-base font-normal">
+                <div className="font-Noto text-base font-normal text-[1.2rem] leading-6">
                   <p>Em casa ou na rua, o verão pode ser sufocante.</p>
                   <p>Sprite ajuda a manter o frescor.</p>
                 </div>
                 <a
                   href="#"
-                  className="w-3/5 text-center bg-white text-black rounded-full shadow px-16 py-2 font-Noto font-bold">
+                  className="w-full lg:w-3/5 text-center bg-white text-black rounded-full shadow px-16 py-2 font-Noto font-bold">
                   Saiba mais
                 </a>
               </div>
@@ -81,13 +83,13 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
           </div>
           <div className="embla__slide">
             <div className="embla__slide__number first-slide3 bg-cover bg-no-repeat bg-center">
-              <div className="flex flex-col gap-4 text-white font-Noto z-10 ml-15 w-1/2">
-                <h2 className="text-[2.375rem] leading-none font-bold">
+              <div className="flex flex-col items-center text-center gap-4 text-white font-Noto z-10 lg:ml-15 w-full lg:w-1/2 lg:items-start">
+                <h2 className="text-[1.6rem] lg:text-[2.375rem] leading-none font-bold font-Noto text-base ">
                   The Athletes Code
                 </h2>
                 <a
                   href="#"
-                  className="w-3/5 text-center bg-white text-black rounded-full shadow px-16 py-2 font-Noto font-bold">
+                  className="w-full lg:w-3/5 text-center bg-white text-black rounded-full shadow px-16 py-2 font-Noto font-bold">
                   Saiba mais
                 </a>
               </div>

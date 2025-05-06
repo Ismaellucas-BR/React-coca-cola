@@ -268,3 +268,6 @@
   @apply bg-cover bg-no-repeat bg-center min-h-[34.375rem];
 }
 /*Embla end*/
+.title-section {
+  @apply font-Noto font-bold text-[1.8rem] leading-8;
+}
