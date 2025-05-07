@@ -1,4 +1,5 @@
 import FirstSection from "./pages/Home/components/FirstSection";
+import FourthSection from "./pages/Home/components/FourthSection";
 import SecondSection from "./pages/Home/components/SecondSection";
 import ThirdSection from "./pages/Home/components/ThirdSection";
 
@@ -8,6 +9,7 @@ function App() {
       <FirstSection />
       <SecondSection />
       <ThirdSection />
+      <FourthSection />
     </div>
   );
 }

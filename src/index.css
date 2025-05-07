@@ -271,3 +271,9 @@
 .title-section {
   @apply font-Noto font-bold text-[1.8rem] leading-8;
 }
+.content-section {
+  @apply font-Noto font-normal text-base;
+}
+.button-default {
+  @apply mt-5 w-full lg:w-3/5 text-center border-2 border-black text-black rounded-full shadow px-16 py-2 font-Noto font-bold;
+}

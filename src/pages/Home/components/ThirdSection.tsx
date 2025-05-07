@@ -10,6 +10,12 @@ export default function ThirdSection() {
         content="Experimenta a magia da música"
         urlAncora="/1"
       />
+      <Card
+        urlImage="https://www.coca-cola.com/content/dam/onexp/br/pt/offerings/sprite-summer/content_card_1_fpo.jpg/width1024.jpg"
+        titleCard="Sobreviva ao calor do verão"
+        content="Não deixe seu ânimo derreter com sorvete no asfalto, refresque-se!"
+        urlAncora="/2"
+      />
     </section>
   );
 }

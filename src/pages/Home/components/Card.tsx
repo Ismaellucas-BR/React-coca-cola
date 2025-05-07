@@ -1,3 +1,4 @@
+import { ArrowRight } from "@phosphor-icons/react/dist/ssr";
 interface CardProps {
   urlImage: string;
   titleCard: string;
@@ -16,15 +17,16 @@ export default function Card({
       <img
         src={urlImage}
         alt={titleCard}
-        className="rounded-t-md rounded-r-md"
+        className="rounded-tl-md rounded-tr-md"
       />
-      <div className="flex flex-col gap-1.5">
+      <div className="flex flex-col gap-1.5 p-5 pb-6">
         <h2 className="font-Noto font-bold text-[1.25rem]">{titleCard}</h2>
         <span className="font-Noto font-normal text-base">{content}</span>
         <a
           href={urlAncora}
-          className="font-Noto font-bold text-[1.1rem] underline-offset-4">
+          className="flex gap-1.5 items-center font-Noto font-bold text-[1.1rem] underline mt-4 arrowAfter">
           Saiba mais
+          <ArrowRight className="fill-black" size={18} />
         </a>
       </div>
     </div>
