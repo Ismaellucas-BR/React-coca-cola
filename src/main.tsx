@@ -1,14 +1,20 @@
-import { createRoot } from "react-dom/client";
-import "./index.css";
-import App from "./App.tsx";
+import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router";
-import Header from "./components/Header.tsx";
+import App from "./App";
+import Brands from "./pages/brands/index";
+import Layout from "./components/themes/layout";
+import ShareACoke from "./pages/shareACoke/share-a-coke";
 
-createRoot(document.getElementById("root")!).render(
+const root: HTMLElement | null = document.getElementById("root");
+
+ReactDOM.createRoot(root!).render(
   <BrowserRouter>
-    <Header />
     <Routes>
-      <Route path="/" element={<App />} />
+      <Route element={<Layout />}>
+        <Route path="/" element={<App />} />
+        <Route path="brands" element={<Brands />} />
+        <Route path="share-a-coke" element={<ShareACoke />} />
+      </Route>
     </Routes>
   </BrowserRouter>
 );

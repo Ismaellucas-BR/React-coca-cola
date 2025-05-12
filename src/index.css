@@ -251,7 +251,8 @@
   box-shadow: inset 0 0 0 0.2rem var(--text-body);
 }
 
-.first-slide1 {
+.first-slide1,
+.first-slide1-1 {
   background-image: url("https://www.coca-cola.com/content/dam/onexp/br/pt/offerings/share-a-coke/hero-desktop.jpg/width3840.jpg");
 }
 .first-slide2 {
@@ -269,11 +270,16 @@
 }
 /*Embla end*/
 .title-section {
-  @apply font-Noto font-bold text-[1.8rem] leading-8;
+  @apply font-Noto font-bold text-black text-[1.8rem] leading-8 lg:text-[2rem];
 }
 .content-section {
   @apply font-Noto font-normal text-base;
 }
 .button-default {
   @apply mt-5 w-full lg:w-3/5 text-center border-2 border-black text-black rounded-full shadow px-16 py-2 font-Noto font-bold;
+}
+@media (max-width: 600px) {
+  .first-slide1-1 {
+    background-image: url("https://www.coca-cola.com/content/dam/onexp/br/pt/offerings/share-a-coke/hero-mobile.jpg/width500.jpg");
+  }
 }
