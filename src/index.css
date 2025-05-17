@@ -278,7 +278,16 @@
 .button-default {
   @apply mt-5 w-full lg:w-3/5 text-center border-2 border-black text-black rounded-full shadow px-16 py-2 font-Noto font-bold;
 }
-@media (max-width: 600px) {
+.section-main {
+  @apply flex flex-col lg:max-w-[70rem] px-6 lg:pb-20;
+}
+.div-form {
+  @apply flex flex-col gap-3;
+}
+.input-form {
+  @apply border-black px-6 py-4 bg-white rounded-lg placeholder:font-Noto;
+}
+@media (max-width: 1024px) {
   .first-slide1-1 {
     background-image: url("https://www.coca-cola.com/content/dam/onexp/br/pt/offerings/share-a-coke/hero-mobile.jpg/width500.jpg");
   }
