@@ -1,0 +1,3 @@
+coloca as bolinhas na navegacao do slider
+colocar o zod nos formularios
+deixar campos de email e data com 50% de largura.

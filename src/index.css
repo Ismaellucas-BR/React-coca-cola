@@ -127,6 +127,7 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
   --font-Noto: "Noto Sans", sans-serif;
+  --breakpoint-nv: 90rem;
 }
 
 @layer base {
@@ -249,20 +250,6 @@
 }
 .embla__dot--selected:after {
   box-shadow: inset 0 0 0 0.2rem var(--text-body);
-}
-
-.first-slide1,
-.first-slide1-1 {
-  background-image: url("https://www.coca-cola.com/content/dam/onexp/br/pt/offerings/share-a-coke/hero-desktop.jpg/width3840.jpg");
-}
-.first-slide2 {
-  background-image: url("https://www.coca-cola.com/content/dam/onexp/br/pt/offerings/sprite-summer/hero_banner_desktop.jpg/width3840.jpg");
-}
-.first-slide3 {
-  background-image: url("https://www.coca-cola.com/content/dam/onexp/ar/es/offerings/the-athletes-code/1440x810_hero-desktop.jpg/width3840.jpg");
-}
-.first-slide4 {
-  background-image: url("https://www.coca-cola.com/content/dam/onexp/br/pt/offerings/share-a-coke/sac_brasil_banner_desktop.jpg/width3840.jpg");
 }
 
 .embla__slide__number {

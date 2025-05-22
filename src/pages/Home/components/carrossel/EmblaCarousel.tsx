@@ -1,17 +1,22 @@
 import React from "react";
 import type { EmblaOptionsType } from "embla-carousel";
+import useEmblaCarousel from "embla-carousel-react";
 
 import { DotButton, useDotButton } from "./EmblaCarouselDotButton";
 import {
   PrevButton,
   NextButton,
   usePrevNextButtons,
-} from "./EmblaCarouselArrowButtons.tsx";
-import useEmblaCarousel from "embla-carousel-react";
+} from "./EmblaCarouselArrowButtons";
 
 type Slide = {
-  image: string;
-  text: string;
+  bgDesktop?: string;
+  bgMobile?: string;
+  title?: string;
+  text?: string;
+  buttonText?: string;
+  buttonLink?: string;
+  videoUrl?: string;
 };
 
 type PropType = {
@@ -19,13 +24,11 @@ type PropType = {
   options?: EmblaOptionsType;
 };
 
-const EmblaCarousel: React.FC<PropType> = (props) => {
-  const { slides, options } = props;
+const EmblaCarousel: React.FC<PropType> = ({ slides, options }) => {
   const [emblaRef, emblaApi] = useEmblaCarousel(options);
 
   const { selectedIndex, scrollSnaps, onDotButtonClick } =
     useDotButton(emblaApi);
-
   const {
     prevBtnDisabled,
     nextBtnDisabled,
@@ -33,98 +36,76 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
     onNextButtonClick,
   } = usePrevNextButtons(emblaApi);
 
+  // Função para pegar imagem certa de acordo com a largura
+  const getBackground = (slide: Slide) => {
+    if (typeof window === "undefined") return slide.bgDesktop ?? "";
+    return window.innerWidth < 1024
+      ? slide.bgMobile ?? slide.bgDesktop ?? ""
+      : slide.bgDesktop ?? "";
+  };
+
   return (
-    <section className="embla w-full">
+    <section className="embla w-full max-w-screen overflow-hidden mx-auto">
       <div className="embla__viewport" ref={emblaRef}>
-        <div className="embla__container">
-          <div className="embla__slide">
-            <div className="embla__slide__number first-slide1 bg-cover bg-no-repeat bg-center">
-              <div className="flex flex-col items-center justify-end w-full h-full text-center gap-4 pb-1.5 text-white font-Noto z-10 lg:ml-15 lg:w-1/2 lg:justify-center lg:text-left lg:items-start">
-                <h2 className="text-[1.57rem] lg:text-[2.375rem] leading-8 lg:leading-none font-bold">
-                  Descubra os ingredientes para a conexão perfeita:
-                </h2>
-                <div className="font-Noto text-base font-normal">
-                  <p className="text-[1.2rem] leading-6 lg:text-[1rem]">
-                    Latas personalizadas, jogos, músicas e muito mais.
-                  </p>
+        <div className="embla__container flex">
+          {slides.map((slide, index) => (
+            <div className="embla__slide" key={index}>
+              {slide.videoUrl ? (
+                <div className="embla__slide__number w-full min-h-[34.375rem]">
+                  <iframe
+                    className="w-full h-full rounded-3xl"
+                    src={slide.videoUrl}
+                    title={`Video Slide ${index}`}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen></iframe>
                 </div>
-                <a
-                  href="#"
-                  className="w-full lg:w-3/5 text-center bg-white text-black rounded-full shadow px-16 py-2 font-Noto font-bold">
-                  Saiba mais
-                </a>
-              </div>
-              <div
-                className="absolute inset-0 bg-black/30 z-2 rounded-lg first-overlay left-[1rem]
-"></div>
-            </div>
-          </div>
-          <div className="embla__slide ">
-            <div className="relative w-full embla__slide__number first-slide2 bg-cover bg-no-repeat bg-center">
-              <div className="flex flex-col items-center text-center gap-4 text-white font-Noto z-10 lg:ml-15 w-full lg:w-1/2 lg:text-left lg:items-start">
-                <p className=" uppercase text-sm font-semibold">
-                  Sprite E Verão
-                </p>
-                <h2 className="text-[1.57rem] lg:text-[2.375rem] leading-8 lg:leading-none font-bold">
-                  Refresque-se do Calor do Verão
-                </h2>
-                <div className="font-Noto text-base font-normal text-[1.2rem] leading-6">
-                  <p>Em casa ou na rua, o verão pode ser sufocante.</p>
-                  <p>Sprite ajuda a manter o frescor.</p>
+              ) : (
+                <div
+                  className="relative embla__slide__number bg-cover bg-no-repeat bg-center"
+                  style={{
+                    backgroundImage: `url('${getBackground(slide)}')`,
+                  }}>
+                  <div className="absolute inset-0 bg-black/30 z-0 rounded-lg" />
+                  <div className="relative flex flex-col items-center justify-end w-full h-full text-center gap-4 pb-1.5 text-white font-Noto z-10 lg:ml-15 lg:w-1/2 lg:justify-center lg:text-left lg:items-start nv:w-1/3">
+                    {slide.title && (
+                      <h2 className="text-[1.57rem] lg:text-[2.375rem] leading-8 lg:leading-none font-bold">
+                        {slide.title}
+                      </h2>
+                    )}
+                    {slide.text && (
+                      <p className="text-[1.2rem] lg:text-[1rem] leading-6">
+                        {slide.text}
+                      </p>
+                    )}
+                    {slide.buttonText && slide.buttonLink && (
+                      <a
+                        href={slide.buttonLink}
+                        className="w-full lg:w-3/5 text-center bg-white text-black rounded-full shadow px-16 py-2 font-bold">
+                        {slide.buttonText}
+                      </a>
+                    )}
+                  </div>
                 </div>
-                <a
-                  href="#"
-                  className="w-full lg:w-3/5 text-center bg-white text-black rounded-full shadow px-16 py-2 font-Noto font-bold">
-                  Saiba mais
-                </a>
-              </div>
-              <div className="absolute inset-0 bg-black/30 z-2 rounded-lg"></div>
+              )}
             </div>
-          </div>
-          <div className="embla__slide">
-            <div className="embla__slide__number first-slide3 bg-cover bg-no-repeat bg-center">
-              <div className="flex flex-col items-center text-center gap-4 text-white font-Noto z-10 lg:ml-15 w-full lg:w-1/2 lg:items-start">
-                <h2 className="text-[1.6rem] lg:text-[2.375rem] leading-none font-bold font-Noto text-base ">
-                  The Athletes Code
-                </h2>
-                <a
-                  href="#"
-                  className="w-full lg:w-3/5 text-center bg-white text-black rounded-full shadow px-16 py-2 font-Noto font-bold">
-                  Saiba mais
-                </a>
-              </div>
-              <div
-                className="absolute inset-0 bg-black/30 z-2 rounded-lg first-overlay left-[1rem]
-"></div>
-            </div>
-          </div>
-          <div className="embla__slide">
-            <div className="embla__slide__number ">
-              <iframe
-                className="w-full min-h-[34.375rem] rounded-3xl"
-                src="https://www.youtube.com/embed/0Ab-F7Y3IXc?autoplay=1&mute=1&controls=0&showinfo=0&modestbranding=1&rel=0&loop=1&playlist=0Ab-F7Y3IXc&cc_load_policy=0"
-                title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen></iframe>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
 
+      {/* Navigation Buttons & Dots */}
       <div className="embla__controls">
         <div className="embla__buttons">
           <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
           <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
         </div>
-
         <div className="embla__dots">
-          {scrollSnaps.map((_: any, index: number) => (
+          {scrollSnaps.map((_, index) => (
             <DotButton
               key={index}
               onClick={() => onDotButtonClick(index)}
-              className={"embla__dot".concat(
+              className={`embla__dot${
                 index === selectedIndex ? " embla__dot--selected" : ""
-              )}
+              }`}
             />
           ))}
         </div>

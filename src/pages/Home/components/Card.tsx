@@ -13,13 +13,13 @@ export default function Card({
   urlAncora,
 }: CardProps) {
   return (
-    <div className="rouded-b-md rounded-r-md shadow-md">
+    <div className="rouded-b-md rounded-r-md shadow-md bg-white">
       <img
         src={urlImage}
         alt={titleCard}
         className="rounded-tl-md rounded-tr-md"
       />
-      <div className="flex flex-col gap-1.5 p-5 pb-6">
+      <div className="flex flex-col gap-1.5 p-5 pb-6 ">
         <h2 className="font-Noto font-bold text-[1.25rem] lg:text-[1.5rem] lg:font-bold">
           {titleCard}
         </h2>

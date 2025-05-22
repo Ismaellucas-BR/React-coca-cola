@@ -23,7 +23,11 @@ export default function ShareACoke() {
           </div>
         </div>
       </section>
-      <FormSections />
+      <FormSections
+        title="Fique por dentro de tudo!"
+        span1="Seja o primeiro a receber novidades e participar de novas experiências
+          junto com a Coca-Cola."
+      />
       <ThirdSection />
       <FourthSection />
       <FifthSection />

@@ -1,15 +1,17 @@
-export default function FormSections() {
+interface PropsForm {
+  title: string;
+  span1: string;
+}
+
+export default function FormSections(props: PropsForm) {
   return (
-    <section className="section-main xl:max-w-[46rem]">
+    <section className="section-main max-w-screen w-full xl:max-w-[46rem]">
       <div className="flex flex-col gap-2 font-Noto text-base">
-        <h2 className="title-section">Fique por dentro de tudo!</h2>
-        <span>
-          Seja o primeiro a receber novidades e participar de novas experiências
-          junto com a Coca-Cola.
-        </span>
+        <h2 className="title-section">{props.title}</h2>
+        <span>{props.span1}</span>
         <span>Os campos marcados com asterisco (*) são obrigatórios.</span>
       </div>
-      <form action="#" className="flex flex-col gap-7">
+      <form action="#" className="flex flex-col gap-7 mt-7">
         <div className="div-form">
           <label htmlFor="" className="font-Noto text-[0.8rem]">
             Nome*
