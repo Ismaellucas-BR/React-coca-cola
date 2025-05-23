@@ -9,7 +9,7 @@ import {
   usePrevNextButtons,
 } from "./EmblaCarouselArrowButtons";
 
-type Slide = {
+export type Slide = {
   bgDesktop?: string;
   bgMobile?: string;
   title?: string;
