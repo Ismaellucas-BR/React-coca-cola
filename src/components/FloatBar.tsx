@@ -5,7 +5,7 @@ export default function FloatBar() {
 
   const links = [
     { label: "Coke Studio", href: "/coke-studio" },
-    { label: "Promoções", href: "/promocoes" },
+    { label: "Promoções", href: "/coke-studio/promos" },
     { label: "Lollapalooza 2025", href: "/lolla-2025" },
     { label: "Experiências", href: "/experiencias" },
     { label: "Time", href: "/time" },

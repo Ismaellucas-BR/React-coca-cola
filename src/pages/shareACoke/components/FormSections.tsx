@@ -1,11 +1,13 @@
 interface PropsForm {
   title: string;
   span1: string;
+  extraClasse?: string;
 }
 
 export default function FormSections(props: PropsForm) {
   return (
-    <section className="section-main max-w-screen w-full xl:max-w-[46rem]">
+    <section
+      className={`section-main max-w-screen w-full xl:w-[46rem] ${props.extraClasse}`}>
       <div className="flex flex-col gap-2 font-Noto text-base">
         <h2 className="title-section">{props.title}</h2>
         <span>{props.span1}</span>
