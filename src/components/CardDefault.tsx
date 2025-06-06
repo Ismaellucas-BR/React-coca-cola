@@ -4,7 +4,7 @@ export interface CardProps {
   titleCard: string;
   content: string;
   textButton?: string;
-  urlAncora: string;
+  urlAncora?: string;
   alt: string;
 }
 export default function CardDefault({
@@ -31,12 +31,14 @@ export default function CardDefault({
           <span className="font-Noto font-normal text-base">{content}</span>
         </div>
 
-        <a
-          href={urlAncora}
-          className="flex gap-1.5 items-center font-Noto font-bold text-[1.1rem] underline mt-4 arrowAfter">
-          {textButton?.trim() === "" ? "Saiba mais" : textButton}
-          <ArrowRight className="fill-black" size={18} />
-        </a>
+        {textButton && (
+          <a
+            href={urlAncora}
+            className="flex gap-1.5 items-center font-Noto font-bold text-[1.1rem] underline mt-4 arrowAfter">
+            {textButton?.trim() === "" ? "Saiba mais" : textButton}
+            <ArrowRight className="fill-black" size={18} />
+          </a>
+        )}
       </div>
     </div>
   );

@@ -6,7 +6,8 @@ import Layout from "./components/themes/layout";
 import ShareACoke from "./pages/shareACoke/share-a-coke";
 import CokeStudio from "./pages/Coke Studio";
 import Promos from "./pages/Coke Studio/promos/Promos";
-import Lollapalooza from "./pages/Coke Studio/lollapalooza/lollapalooza";
+import Lollapalooza from "./pages/Coke Studio/lollapalooza/Lollapalooza";
+import Experiences from "./pages/experiences";
 
 const root: HTMLElement | null = document.getElementById("root");
 
@@ -23,6 +24,7 @@ ReactDOM.createRoot(root!).render(
           path="coke-studio/lollapalooza-2025"
           element={<Lollapalooza />}
         />
+        <Route path="coke-studio/experiences" element={<Experiences />} />
       </Route>
     </Routes>
   </BrowserRouter>
