@@ -7,12 +7,15 @@ import ShareACoke from "./pages/shareACoke/share-a-coke";
 import CokeStudio from "./pages/Coke Studio";
 import Promos from "./pages/Coke Studio/promos/Promos";
 import Lollapalooza from "./pages/Coke Studio/lollapalooza/Lollapalooza";
-import Experiences from "./pages/experiences";
+import Experiences from "./pages/Coke Studio/experiences";
+import Team from "./pages/Coke Studio/team";
+import ScrollToTop from "./components/ScrollToTop";
 
 const root: HTMLElement | null = document.getElementById("root");
 
 ReactDOM.createRoot(root!).render(
   <BrowserRouter>
+    <ScrollToTop />
     <Routes>
       <Route element={<Layout />}>
         <Route path="/" element={<App />} />
@@ -25,6 +28,7 @@ ReactDOM.createRoot(root!).render(
           element={<Lollapalooza />}
         />
         <Route path="coke-studio/experiences" element={<Experiences />} />
+        <Route path="coke-studio/team" element={<Team />} />
       </Route>
     </Routes>
   </BrowserRouter>

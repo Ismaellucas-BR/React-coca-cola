@@ -8,13 +8,15 @@ interface PropsSectionPlusTitleMain {
   urlImg: string;
   alt: string;
   flexDirection?: string;
+  FirstSectionPadding?: string;
 }
 
 export default function ComponentDefaultPlusTitle(
   props: PropsSectionPlusTitleMain
 ) {
   return (
-    <section className="flex flex-col justify-center items-center text-center max-w-screen nv:max-w-[70rem] w-full gap-3">
+    <section
+      className={`flex flex-col justify-center items-center text-center max-w-screen nv:max-w-[70rem] w-full gap-3 ${props.FirstSectionPadding}`}>
       <h3 className="font-Noto font-bold text-[1.8rem] xl:text-[2rem] text-black">
         {props.titleMain}
       </h3>
@@ -37,8 +39,12 @@ export default function ComponentDefaultPlusTitle(
             {props.textButton}
           </a>
         </div>
-        <div className="px-8 pb-2 pt-5 xl:w-1/2">
-          <img className="rounded-lg" alt={props.alt} src={props.urlImg} />
+        <div className="px-8 pb-2 pt-5 lg:w-full xl:w-1/2">
+          <img
+            className="rounded-lg lg:w-full"
+            alt={props.alt}
+            src={props.urlImg}
+          />
         </div>
       </div>
     </section>

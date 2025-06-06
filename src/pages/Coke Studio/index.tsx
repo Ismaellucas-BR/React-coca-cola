@@ -121,62 +121,65 @@ export default function CokeStudio() {
           span1="Fique de olho para saber dos próximos festivais, novidades, experiências e muito mais com Coke Studio. Assine a newsletter para ter acesso."
         />
       </div>
-      <ComponentDefaultPlusTitle
-        titleMain="Promoções"
-        titleSecondary="Autógrafo digital da Peggy Gou"
-        span="Aqui você encontra uma foto autografada para mostrar todo seu amor de fã pela Peggy."
-        urlButton="#"
-        textButton="Eu quero"
-        urlImg="https://www.coca-cola.com/content/dam/onexp/global/central/offerings/coke-studio-2024/general-card_cokestudio2024_peggy-gou-autograph_generic.jpg/width1960.jpg"
-        alt="Mulher (Peggy) segurando uma garrafa de coca-cola"
-        flexDirection="flex-row-reverse"
-      />
-      <ComponentDefaultNoTitle
-        flexDirection="flex-row-reverse lg:mt-[7.5rem]"
-        title="Papel de parede da Peggy Gou"
-        span="Pra deixar sua tela do celular eletrizante como as pistas de dança."
-        urlButton="#"
-        textButton="Eu quero"
-        urlImage="https://www.coca-cola.com/content/dam/onexp/global/central/offerings/coke-studio-2024/general-card_cokestudio2024_peggy-gou-wallpaper_generic.jpg/width1960.jpg"
-        alt="Peggy Gou posando para foto"
-      />
-      <ComponentDefaultNoTitle
-        flexDirection="flex-row lg:mt-[7.5rem]"
-        title="Deixe sua tela no estilo com o papel de parede da Karol G"
-        span="Um presente que todo fã de verdade da Karol G vai querer ter."
-        urlButton="#"
-        textButton="Eu quero"
-        urlImage="https://www.coca-cola.com/content/dam/onexp/global/central/offerings/coke-studio-2024/general-card_cokestudio2024_karol-g-wallpaper_generic.jpg/width1960.jpg"
-        alt="Karol G posando para foto"
-      />
-      <ComponentDefaultNoTitle
-        flexDirection="flex-row-reverse lg:mt-[7.5rem]"
-        title="Foto Autografada com NewJeans no Coke Studio"
-        span="Baixe já sua foto do NewJeans no Coke Studio, assinado pelo grupo."
-        urlButton="#"
-        textButton="Eu quero"
-        urlImage="https://www.coca-cola.com/content/dam/onexp/br/pt/offerings/coke-studio-24/general-card_cokestudio2024_new-jeans-autograph-generic.jpg/width1960.jpg"
-        alt="NewJeans posando para foto"
-      />
-      <ComponentDefaultPlusTitle
-        titleMain="Experiências"
-        titleSecondary="Jão by Coke Studio: A Música Continua!"
-        span="A vibe do Jão by Coke Studio fica pra sempre! Reviva os melhores momentos e prepare-se, porque a música não para por aqui."
-        urlButton="#"
-        textButton="Saiba mais"
-        urlImg="https://www.coca-cola.com/content/dam/onexp/br/pt/offerings/coke-studio-24/lolla-25/jao-exclusive/general-card-desktop.jpg/width1960.jpg"
-        alt="O cantor Jão cantando, segurando um microfone na mão, cercado pelo logo do Coke Studio com um fundo preto."
-        flexDirection="flex-row"
-      />
-      <ComponentDefaultNoTitle
-        flexDirection="flex-row lg:mt-[7.5rem]"
-        title="Peggy Gou a caminho de Puglia, o game"
-        span="Ajude Peggy a chegar ao evento ao vivo do Coke Studio. Esquive dos obstáculos, colete power-ups e entre no ritmo da sua última faixa! Preparado para embarcar nessa aventura mágica?"
-        urlButton="#"
-        textButton="Jogar"
-        urlImage="https://www.coca-cola.com/content/dam/onexp/br/pt/offerings/coke-studio-24/game-experience_coke-studio-2024_peggy-gou_4_3_.jpg/width1960.jpg"
-        alt="Imagem de jogo com personagem segurando discos e uma scooter amarela."
-      />
+      <div className="flex flex-col items-center gap-5 lg:gap-14">
+        <ComponentDefaultPlusTitle
+          titleMain="Promoções"
+          titleSecondary="Autógrafo digital da Peggy Gou"
+          span="Aqui você encontra uma foto autografada para mostrar todo seu amor de fã pela Peggy."
+          urlButton="#"
+          textButton="Eu quero"
+          urlImg="https://www.coca-cola.com/content/dam/onexp/global/central/offerings/coke-studio-2024/general-card_cokestudio2024_peggy-gou-autograph_generic.jpg/width1960.jpg"
+          alt="Mulher (Peggy) segurando uma garrafa de coca-cola"
+          flexDirection="flex-row-reverse"
+          FirstSectionPadding="pt-10"
+        />
+        <ComponentDefaultNoTitle
+          flexDirection="flex-row-reverse xl:mt-[7.5rem]"
+          title="Papel de parede da Peggy Gou"
+          span="Pra deixar sua tela do celular eletrizante como as pistas de dança."
+          urlButton="#"
+          textButton="Eu quero"
+          urlImage="https://www.coca-cola.com/content/dam/onexp/global/central/offerings/coke-studio-2024/general-card_cokestudio2024_peggy-gou-wallpaper_generic.jpg/width1960.jpg"
+          alt="Peggy Gou posando para foto"
+        />
+        <ComponentDefaultNoTitle
+          flexDirection="flex-row xl:mt-[7.5rem]"
+          title="Deixe sua tela no estilo com o papel de parede da Karol G"
+          span="Um presente que todo fã de verdade da Karol G vai querer ter."
+          urlButton="#"
+          textButton="Eu quero"
+          urlImage="https://www.coca-cola.com/content/dam/onexp/global/central/offerings/coke-studio-2024/general-card_cokestudio2024_karol-g-wallpaper_generic.jpg/width1960.jpg"
+          alt="Karol G posando para foto"
+        />
+        <ComponentDefaultNoTitle
+          flexDirection="flex-row-reverse xl:mt-[7.5rem]"
+          title="Foto Autografada com NewJeans no Coke Studio"
+          span="Baixe já sua foto do NewJeans no Coke Studio, assinado pelo grupo."
+          urlButton="#"
+          textButton="Eu quero"
+          urlImage="https://www.coca-cola.com/content/dam/onexp/br/pt/offerings/coke-studio-24/general-card_cokestudio2024_new-jeans-autograph-generic.jpg/width1960.jpg"
+          alt="NewJeans posando para foto"
+        />
+        <ComponentDefaultPlusTitle
+          titleMain="Experiências"
+          titleSecondary="Jão by Coke Studio: A Música Continua!"
+          span="A vibe do Jão by Coke Studio fica pra sempre! Reviva os melhores momentos e prepare-se, porque a música não para por aqui."
+          urlButton="#"
+          textButton="Saiba mais"
+          urlImg="https://www.coca-cola.com/content/dam/onexp/br/pt/offerings/coke-studio-24/lolla-25/jao-exclusive/general-card-desktop.jpg/width1960.jpg"
+          alt="O cantor Jão cantando, segurando um microfone na mão, cercado pelo logo do Coke Studio com um fundo preto."
+          flexDirection="flex-row md:items-center"
+        />
+        <ComponentDefaultNoTitle
+          flexDirection="flex-row xl:mt-[7.5rem]"
+          title="Peggy Gou a caminho de Puglia, o game"
+          span="Ajude Peggy a chegar ao evento ao vivo do Coke Studio. Esquive dos obstáculos, colete power-ups e entre no ritmo da sua última faixa! Preparado para embarcar nessa aventura mágica?"
+          urlButton="#"
+          textButton="Jogar"
+          urlImage="https://www.coca-cola.com/content/dam/onexp/br/pt/offerings/coke-studio-24/game-experience_coke-studio-2024_peggy-gou_4_3_.jpg/width1960.jpg"
+          alt="Imagem de jogo com personagem segurando discos e uma scooter amarela."
+        />
+      </div>
       <div className="flex flex-col gap-10 p-5 items-center mb-10 max-w-screen nv:max-w-[70rem] lg:flex-row justify-center lg:gap-10">
         {cardsContent.map((card, index) => {
           return <CardDefault key={index} {...card} />;

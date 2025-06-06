@@ -3,7 +3,7 @@ import ComponentDefaultPlusTitle from "@/components/ComponentDefaultPlusTitle";
 import FloatBar from "@/components/FloatBar";
 import MegaBanner from "@/components/MegaBanner";
 import { Link } from "react-router";
-import FormSections from "../shareACoke/components/FormSections";
+import FormSections from "../../shareACoke/components/FormSections";
 
 export default function Experiences() {
   return (
