@@ -13,6 +13,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import Powerade from "./pages/powerade";
 import Instituto from "./pages/instituto";
 import Sustainability from "./pages/sustainability";
+import KnowUs from "./pages/About_us/KnowUs";
 
 const root: HTMLElement | null = document.getElementById("root");
 
@@ -35,6 +36,7 @@ ReactDOM.createRoot(root!).render(
         <Route path="powerade-novidades" element={<Powerade />} />
         <Route path="instituto-coca-cola-brasil" element={<Instituto />} />
         <Route path="sustainability" element={<Sustainability />} />
+        <Route path="/sobre-nos/nos-coheca" element={<KnowUs />} />
       </Route>
     </Routes>
   </BrowserRouter>
