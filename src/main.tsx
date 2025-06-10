@@ -10,6 +10,8 @@ import Lollapalooza from "./pages/Coke Studio/lollapalooza/Lollapalooza";
 import Experiences from "./pages/Coke Studio/experiences";
 import Team from "./pages/Coke Studio/team";
 import ScrollToTop from "./components/ScrollToTop";
+import Powerade from "./pages/powerade";
+import Instituto from "./pages/instituto";
 
 const root: HTMLElement | null = document.getElementById("root");
 
@@ -29,6 +31,8 @@ ReactDOM.createRoot(root!).render(
         />
         <Route path="coke-studio/experiences" element={<Experiences />} />
         <Route path="coke-studio/team" element={<Team />} />
+        <Route path="powerade-novidades" element={<Powerade />} />
+        <Route path="instituto-coca-cola-brasil" element={<Instituto />} />
       </Route>
     </Routes>
   </BrowserRouter>

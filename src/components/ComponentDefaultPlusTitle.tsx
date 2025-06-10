@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 interface PropsSectionPlusTitleMain {
   titleMain: string;
   subTitle?: string;
@@ -33,11 +35,11 @@ export default function ComponentDefaultPlusTitle(
           <span className="font-Noto text-[1.1rem] font-normal">
             {props.span}
           </span>
-          <a
-            href={props.urlButton}
-            className="mt-5 w-full xl:w-3/5 text-center border-2 border-black text-black rounded-full shadow px-16 py-2 font-Noto font-bold xl:py-1">
+          <Link
+            to={props.urlButton}
+            className="mt-5  text-center border-2 border-black text-black rounded-full shadow px-16 py-2 font-Noto font-bold lg:w-max xl:py-1">
             {props.textButton}
-          </a>
+          </Link>
         </div>
         <div className="px-8 pb-2 pt-5 lg:w-full xl:w-1/2">
           <img
