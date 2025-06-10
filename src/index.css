@@ -259,6 +259,10 @@
 .scrollbar-hide::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera */
 }
+svg .lucide-chevron-down {
+  font-size: 2rem !important;
+  width: 200%;
+}
 .embla__slide__number {
   @apply bg-cover bg-no-repeat bg-center min-h-[34.375rem];
 }
