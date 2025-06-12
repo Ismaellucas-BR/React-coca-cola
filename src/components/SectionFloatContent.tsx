@@ -13,7 +13,7 @@ interface PropsSectionFloatContent {
 export default function SectionFloatContent(props: PropsSectionFloatContent) {
   return (
     <section
-      className={`flex  xl:max-w-[70rem]  lg:px-0 xl:flex-row-reverse lg:pt-10 lg:pb-20 lg:items-center lg:justify-center xl:mt-30 ${props.extraClassSection}`}>
+      className={`flex  xl:max-w-[70rem]  lg:px-0  lg:pt-10 lg:pb-20 lg:items-center lg:justify-center xl:mt-30 ${props.extraClassSection}`}>
       <img
         src={props.urlImage}
         alt={props.alt}

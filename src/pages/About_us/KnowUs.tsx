@@ -43,8 +43,8 @@ export default function KnowUs() {
           span="Estamos comprometidos em oferecer às pessoas as bebidas que desejam, em uma variedade de categorias e tamanhos, enquanto promovemos soluções sustentáveis que fortalecem a resiliência do nosso negócio e criam mudanças positivas para o planeta."
           urlImage="https://www.coca-cola.com/content/dam/onexp/br/pt/about-us/nos-conheca/0.jpg/width3840.jpg"
           alt=""
-          extraClassSection="flex flex-col-reverse justify-center items-center lg:w-full"
-          extraClassDiv="-bottom-10! max-w-[90%]"
+          extraClassSection="flex flex-col-reverse justify-center items-center lg:w-full xl:flex-row "
+          extraClassDiv="-bottom-10! max-w-[90%] xl:-ml-20"
         />
         <SectionFloatContent
           title="
@@ -53,7 +53,7 @@ export default function KnowUs() {
           span="Nosso portfólio de bebidas se expandiu para mais de 200 marcas e milhares de bebidas ao redor do mundo, desde refrigerantes e águas até cafés e chás. Saiba mais sobre nossas marcas e nosso compromisso com produtos de qualidade."
           urlImage="https://www.coca-cola.com/content/dam/onexp/br/pt/about-us/nos-conheca/1.jpg/width3840.jpg"
           alt=""
-          extraClassSection="flex flex-col-reverse justify-center items-center"
+          extraClassSection="flex flex-col-reverse justify-center items-center xl:flex-row-reverse"
           extraClassDiv="-bottom-10! max-w-[90%]"
         />
         <SectionFloatContent
@@ -65,8 +65,8 @@ export default function KnowUs() {
           span="Junto com nossos parceiros engarrafadores, empregamos mais de 700.000 pessoas, ajudando a trazer oportunidade econômica para comunidades locais em todo o mundo. éticas."
           urlImage="https://www.coca-cola.com/content/dam/onexp/br/pt/about-us/nos-conheca/2.jpg/width3840.jpg"
           alt=""
-          extraClassSection="flex flex-col-reverse justify-center items-center"
-          extraClassDiv="-bottom-10! max-w-[90%]"
+          extraClassSection="flex flex-col-reverse justify-center items-center xl:flex-row"
+          extraClassDiv="-bottom-10! max-w-[90%] xl:-ml-20"
         />
         <SectionFloatContent
           title="
@@ -77,8 +77,8 @@ export default function KnowUs() {
           span="Fazemos negócios da maneira correta, não apenas da maneira mais fácil. Saiba mais sobre nossas práticas de trabalho sustentáveis e éticas."
           urlImage="https://www.coca-cola.com/content/dam/onexp/br/pt/about-us/nos-conheca/3.jpg/width3840.jpg"
           alt=""
-          extraClassSection="flex flex-col-reverse justify-center items-center"
-          extraClassDiv="-bottom-10! max-w-[90%]"
+          extraClassSection="flex flex-col-reverse justify-center items-center xl:flex-row-reverse"
+          extraClassDiv="-bottom-10! max-w-[90%] xl:-ml-20"
         />
         <SectionFloatContent
           title="Nossas Pessoas Movem Nosso Propósito
@@ -86,16 +86,16 @@ export default function KnowUs() {
           span="Como uma empresa orientada por propósito, ajudamos a criar um futuro melhor para todos aqueles que são alcançados por nossas marcas e sistema de negócios, trabalhando para proporcionar acesso a oportunidades igualitárias e promovendo um senso de pertencimento tanto em nossos locais de trabalho quanto nas comunidades que servimos."
           urlImage="https://www.coca-cola.com/content/dam/onexp/br/pt/about-us/nos-conheca/4.jpg/width3840.jpg"
           alt=""
-          extraClassSection="flex flex-col-reverse justify-center items-center"
-          extraClassDiv="-bottom-10! max-w-[90%]"
+          extraClassSection="flex flex-col-reverse justify-center items-center xl:flex-row"
+          extraClassDiv="-bottom-10! max-w-[90%] xl:-ml-20"
         />
         <SectionFloatContent
           title="O Sistema Coca‑Cola ."
           span="Engarrafadores locais trabalham conosco para levar nossas bebidas da marca Coca‑Cola para onde quer que você esteja no mundo. Mais de 225 parceiros engarrafadores em cerca de 900 plantas de envase compõem o sistema Coca‑Cola e nos ajudam a fornecer bebidas globalmente."
           urlImage="https://www.coca-cola.com/content/dam/onexp/br/pt/about-us/nos-conheca/5.jpg/width3840.jpg"
           alt=""
-          extraClassSection="flex flex-col-reverse justify-center items-center"
-          extraClassDiv="-bottom-10! max-w-[90%]"
+          extraClassSection="flex flex-col-reverse justify-center items-center xl:flex-row-reverse"
+          extraClassDiv="-bottom-10! max-w-[90%] xl:-ml-20"
         />
       </section>
     </div>

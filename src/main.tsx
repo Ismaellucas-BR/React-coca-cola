@@ -14,6 +14,7 @@ import Powerade from "./pages/powerade";
 import Instituto from "./pages/instituto";
 import Sustainability from "./pages/sustainability";
 import KnowUs from "./pages/About_us/KnowUs";
+import Purpose from "./pages/About_us/Purpose";
 
 const root: HTMLElement | null = document.getElementById("root");
 
@@ -37,6 +38,7 @@ ReactDOM.createRoot(root!).render(
         <Route path="instituto-coca-cola-brasil" element={<Instituto />} />
         <Route path="sustainability" element={<Sustainability />} />
         <Route path="/sobre-nos/nos-conheca" element={<KnowUs />} />
+        <Route path="/sobre-nos/proposito-e-visao" element={<Purpose />} />
       </Route>
     </Routes>
   </BrowserRouter>
