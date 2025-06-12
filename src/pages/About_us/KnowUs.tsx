@@ -4,7 +4,7 @@ export default function KnowUs() {
   return (
     <div className="flex flex-col gap-2 items-center  w-full py-10 xl:py-15">
       <div
-        className="relative w-full max-w-[90%] h-[35.5rem] bg-center bg-cover bg-no-repeat flex justify-center items-center lg:max-w-[80rem]  xl:max-w-[80rem] rounded-xl"
+        className="relative w-full max-w-[90%] h-[35.5rem] bg-center bg-cover bg-no-repeat flex justify-center items-center lg:max-w-[90%]  xl:max-w-[80rem] rounded-xl"
         style={{
           backgroundImage:
             'url("https://www.coca-cola.com/content/dam/onexp/br/pt/about-us/nos-conheca/es_mexico_nuestra_compania_campaign_card_1280x1024.jpg/width3840.jpg")',
@@ -14,7 +14,7 @@ export default function KnowUs() {
           NOSSA COMPANHIA
         </h1>
       </div>
-      <div className="flex flex-col max-w-[90%] gap-3 mt-5">
+      <div className="flex flex-col max-w-[90%] gap-3 mt-5 xl:max-w-[70rem] xl:pb-10">
         <span className="content-section">
           Em 8 de maio de 1886, o Dr. John Pemberton levou seu xarope
           aperfeiçoado para a Farmácia Jacobs no centro de Atlanta, onde foi
@@ -43,7 +43,7 @@ export default function KnowUs() {
           span="Estamos comprometidos em oferecer às pessoas as bebidas que desejam, em uma variedade de categorias e tamanhos, enquanto promovemos soluções sustentáveis que fortalecem a resiliência do nosso negócio e criam mudanças positivas para o planeta."
           urlImage="https://www.coca-cola.com/content/dam/onexp/br/pt/about-us/nos-conheca/0.jpg/width3840.jpg"
           alt=""
-          extraClassSection="flex flex-col-reverse justify-center items-center"
+          extraClassSection="flex flex-col-reverse justify-center items-center lg:w-full"
           extraClassDiv="-bottom-10! max-w-[90%]"
         />
         <SectionFloatContent

@@ -36,7 +36,7 @@ ReactDOM.createRoot(root!).render(
         <Route path="powerade-novidades" element={<Powerade />} />
         <Route path="instituto-coca-cola-brasil" element={<Instituto />} />
         <Route path="sustainability" element={<Sustainability />} />
-        <Route path="/sobre-nos/nos-coheca" element={<KnowUs />} />
+        <Route path="/sobre-nos/nos-conheca" element={<KnowUs />} />
       </Route>
     </Routes>
   </BrowserRouter>
