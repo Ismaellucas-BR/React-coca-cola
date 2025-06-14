@@ -2,6 +2,7 @@ import FloatBar from "@/components/FloatBar";
 import EmblaCarousel from "../Home/components/carrossel/EmblaCarousel";
 import Card from "../Home/components/Card";
 import FormSections from "../shareACoke/components/FormSections";
+import IngredientsRefriSection from "@/components/IngredientsRefriSection";
 
 export default function index() {
   return (
@@ -48,6 +49,27 @@ export default function index() {
       <FormSections
         title="Complete seus dados para participar das experiências com Sprite"
         span1="Refresque-se com Sprite!"
+      />
+      <IngredientsRefriSection
+        urlImage="https://www.coca-cola.com/content/dam/onexp/br/pt/brand-landing/sprite/SPRITE%20ORIGINAL%20234%20x%20700.png/width3840.png"
+        alt="Uma lata de Sprite"
+        title="Sprite"
+        content="A cada gole é possível sentir o sabor único do limão, ideal para saciar sua sede. O refrigerante perfeito para te ajudar a se refrescar em qualquer momento do dia."
+        accordionTitle="Ver Informação nutricional"
+        cardProps={{
+          subtitle: "Porção de 200 ml (1 copo)",
+          quantityPerServingValue: "| %VD (*)",
+          energyValue: "Valor energético",
+          energyValueNumber: 81,
+          energyValueNumberValue: 4,
+          ingredientes: true,
+          items: [
+            { title: "Carboidratos, dos quais", number: 20, value: 7 },
+            { title: "Açúcares", number: 20 },
+            { title: "Sódio", number: 15, value: 1 },
+            { title: "Fibra alimentar", number: 2, value: 3 },
+          ],
+        }}
       />
     </div>
   );
