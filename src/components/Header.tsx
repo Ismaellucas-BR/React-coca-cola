@@ -30,7 +30,7 @@ export default function Header() {
             </div>
 
             {/* DROPDOWN */}
-            <ul className="absolute left-0 top-12 mt-2 w-60 bg-white shadow-lg p-4 space-y-2 hidden group-hover:block min-w-max rounded-md">
+            <ul className="absolute left-0 top-12 mt-2 w-60 bg-white shadow-lg p-4 space-y-2 hidden group-hover:block min-w-max rounded-md z-40">
               <li className="flex items-center gap-3 hover:font-semibold cursor-pointer group/item">
                 <Link to="share-a-coke"> Compartilhe uma Coca‑Cola</Link>
                 <div className="hidden group-hover/item:block">

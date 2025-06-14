@@ -17,7 +17,7 @@ export default function FirstSection() {
           title: "Descubra os ingredientes para a conexão perfeita:",
           text: "Latas personalizadas, jogos, músicas e muito mais.",
           buttonText: "Saiba mais",
-          buttonLink: "https://www.coca-cola.com",
+          buttonLink: "share-a-coke",
         },
         {
           bgDesktop:
@@ -26,8 +26,6 @@ export default function FirstSection() {
             "https://www.coca-cola.com/content/dam/onexp/br/pt/offerings/sprite-summer/hero_banner_desktop.jpg/width3840.jpg",
           title: " Um Toque de Frescor Para Seu Dia",
           text: "Não deixe seu ânimo derreter com sorvete no asfalto, refresque-se!",
-          buttonText: "Saiba mais",
-          buttonLink: "#",
         },
         {
           bgDesktop:

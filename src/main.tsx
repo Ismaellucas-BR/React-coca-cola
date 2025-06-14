@@ -15,6 +15,8 @@ import Instituto from "./pages/instituto";
 import Sustainability from "./pages/sustainability";
 import KnowUs from "./pages/About_us/KnowUs";
 import Purpose from "./pages/About_us/Purpose";
+import LayoutSprite from "./components/themes/LayoutSprite";
+import SpriteIndex from "./pages/sprite/index";
 
 const root: HTMLElement | null = document.getElementById("root");
 
@@ -39,6 +41,9 @@ ReactDOM.createRoot(root!).render(
         <Route path="sustainability" element={<Sustainability />} />
         <Route path="/sobre-nos/nos-conheca" element={<KnowUs />} />
         <Route path="/sobre-nos/proposito-e-visao" element={<Purpose />} />
+      </Route>
+      <Route element={<LayoutSprite />}>
+        <Route path="brands/sprite" element={<SpriteIndex />} />
       </Route>
     </Routes>
   </BrowserRouter>

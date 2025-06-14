@@ -29,12 +29,6 @@ const EmblaCarousel: React.FC<PropType> = ({ slides, options }) => {
 
   const { selectedIndex, scrollSnaps, onDotButtonClick } =
     useDotButton(emblaApi);
-  const {
-    prevBtnDisabled,
-    nextBtnDisabled,
-    onPrevButtonClick,
-    onNextButtonClick,
-  } = usePrevNextButtons(emblaApi);
 
   // Função para pegar imagem certa de acordo com a largura
   const getBackground = (slide: Slide) => {
@@ -93,19 +87,19 @@ const EmblaCarousel: React.FC<PropType> = ({ slides, options }) => {
       </div>
 
       {/* Navigation Buttons & Dots */}
-      <div className="embla__controls">
-        <div className="embla__buttons">
-          <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
-          <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
-        </div>
-        <div className="embla__dots">
+      <div className="embla__controls w-full! flex! justify-center! mt-4">
+        <div className="embla__dots flex! justify-center!">
           {scrollSnaps.map((_, index) => (
             <DotButton
               key={index}
               onClick={() => onDotButtonClick(index)}
-              className={`embla__dot${
-                index === selectedIndex ? " embla__dot--selected" : ""
-              }`}
+              className={`w-4 h-4 rounded-full border border-black bg-[#eeeeee] flex items-center justify-center mx-1 transition-all duration-300
+          ${
+            index === selectedIndex
+              ? "after:content-[''] after:w-2 after:h-2 after:rounded-full after:bg-black"
+              : ""
+          }
+        `}
             />
           ))}
         </div>
