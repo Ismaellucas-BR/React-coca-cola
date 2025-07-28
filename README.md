@@ -8,7 +8,7 @@ Este repositório contém um projeto que recria o site da Coca-Cola utilizando R
 
 ## 🚀 Demonstração
 
-![Demo](https://developerismaellucas.com/assets/cocacolaMain.webp)
+![Demo](https://developerismaellucas.com/assets/cocacolaHome.webp)
 
 [🔗 Acesse o projeto](https://cocacola.developerismaellucas.com/)
 
