@@ -35,7 +35,7 @@ export default function KnowUs() {
           econômica para comunidades locais em todo o mundo.
         </span>
       </div>
-      <section className="flex flex-col gap-10 lg:gap-5">
+      <section className="flex flex-col gap-10 lg:gap-5 items-center">
         <SectionFloatContent
           title="
         Nosso Propósito é Refrescar o Mundo e Fazer a Diferença.

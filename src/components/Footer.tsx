@@ -1,5 +1,5 @@
 import { GithubLogo } from "@phosphor-icons/react";
-import { LinkIcon, SquareArrowOutUpRight } from "lucide-react";
+import { SquareArrowOutUpRight } from "lucide-react";
 import { Link } from "react-router";
 
 export default function Footer() {

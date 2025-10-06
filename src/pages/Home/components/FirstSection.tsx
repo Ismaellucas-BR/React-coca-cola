@@ -1,7 +1,10 @@
 import EmblaCarousel from "./carrossel/EmblaCarousel";
 import { EmblaOptionsType } from "embla-carousel";
+// @ts-ignore
 const OPTIONS: EmblaOptionsType = { loop: true };
+// @ts-ignore
 const SLIDE_COUNT = 5;
+// @ts-ignore
 const SLIDES: any = [];
 
 export default function FirstSection() {

@@ -13,7 +13,7 @@ export default function Card({
   urlAncora,
 }: CardProps) {
   return (
-    <div className="rouded-b-md rounded-r-md shadow-md bg-white">
+    <div className="rounded-md shadow-md bg-white">
       <img
         src={urlImage}
         alt={titleCard}

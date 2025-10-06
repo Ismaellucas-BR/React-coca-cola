@@ -3,12 +3,6 @@ import type { EmblaOptionsType } from "embla-carousel";
 import useEmblaCarousel from "embla-carousel-react";
 
 import { DotButton, useDotButton } from "./EmblaCarouselDotButton";
-import {
-  PrevButton,
-  NextButton,
-  usePrevNextButtons,
-} from "./EmblaCarouselArrowButtons";
-
 export type Slide = {
   bgDesktop?: string;
   bgMobile?: string;

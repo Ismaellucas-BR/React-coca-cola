@@ -18,7 +18,7 @@ function App() {
           textButton="Saiba mais"
           urlImg="https://www.coca-cola.com/content/dam/onexp/br/pt/brands/sprite/sprite_lemon.jpg/width1338.jpg"
           alt="banner promocional da sprite"
-          flexDirection="flex flex-row"
+          flexDirection="flex xl:flex-row"
         />
         <ThirdSection />
         <SectionFloatContent
@@ -32,11 +32,11 @@ function App() {
               sustentável"
           urlButton="#"
           textButton="Entenda melhor"
-          extraClassSection="flex-col-reverse"
-          extraClassDiv="-bottom-10"
+          extraClassSection="flex-col-reverse xl:flex-row w-[90%]"
+          extraClassDiv="-bottom-10 xl:-bottom-10! xl:-ml-10"
         />
         <FifthSection
-          flexDirection="flex flex-row xl:max-w-[70rem]!"
+          flexDirection="flex  xl:flex-row w-[90%]! xl:max-w-[70rem]!"
           title="Encontre Seu Estilo na Loja Coca‑Cola"
           span="Descubra o merchandising oficial na Loja Coca‑Cola. Uma coleção única
           para você celebrar a sua conexão com a felicidade!"

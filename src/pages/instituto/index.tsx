@@ -44,7 +44,7 @@ export default function Instituto() {
             textButton="Baixe aqui"
             urlButton="#"
             extraClassSection="flex flex-col justify-center items-center xl:flex-row! xl:mt-10! xl:pb-0"
-            extraClassDiv="-top-10 xl:-top-20 xl:-left-10 max-w-[90%]"
+            extraClassDiv="-top-10 xl:top-0 xl:-left-10 max-w-[90%] xl:mt-0"
           />
           <ComponentDefaultPlusTitle
             titleMain="Nossas iniciativas "
@@ -74,8 +74,8 @@ export default function Instituto() {
             span="Reconhecidos por nossa inovação social e capacidade de escala, queremos contribuir para o empoderamento econômico de 5 milhões de pessoas até 2030. Nos propomos a criar oportunidades no mundo do trabalho para jovens, prioritariamente negros e mulheres em situação de vulnerabilidade socioeconômica, que serão potencializadas por parcerias, pelo Sistema Coca Cola e pela sua participação."
             urlImage="https://www.coca-cola.com/content/dam/onexp/br/pt/history/fotos-2022/pagina_inicial_rumo_aos_milhoes.jpg/width3840.jpg"
             alt=""
-            extraClassSection="flex flex-col justify-center items-center "
-            extraClassDiv="-top-10 xl:min-h-[34.5rem]  max-w-[90%]"
+            extraClassSection="flex flex-col justify-center items-center xl:flex-row"
+            extraClassDiv="-top-10 xl:min-h-[34.5rem]  max-w-[90%] xl:mt-0! xl:-ml-10"
           />
         </div>
       </section>

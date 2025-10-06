@@ -1,7 +1,6 @@
 import FloatBar from "@/components/FloatBar";
 import MegaBanner from "@/components/MegaBanner";
 import { Link } from "react-router";
-import CokeStudioTeam from "../components/CokeStudioTeam";
 
 export default function Team() {
   return (

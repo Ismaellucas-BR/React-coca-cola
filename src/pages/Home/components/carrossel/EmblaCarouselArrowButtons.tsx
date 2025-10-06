@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 export const usePrevNextButtons = (emblaApi: any) => {
   const [prevBtnDisabled, setPrevBtnDisabled] = useState(true);

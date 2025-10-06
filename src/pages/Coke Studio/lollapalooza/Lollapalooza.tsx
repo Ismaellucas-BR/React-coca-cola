@@ -3,21 +3,15 @@ import { Link } from "react-router";
 import { MouseEventHandler, useState } from "react";
 import { Play } from "lucide-react";
 import useEmblaCarousel from "embla-carousel-react";
-import {
-  DotButton,
-  useDotButton,
-} from "../../Home/components/carrossel/EmblaCarouselDotButton";
-import {
-  PrevButton,
-  NextButton,
-  usePrevNextButtons,
-} from "../../Home/components/carrossel/EmblaCarouselArrowButtons";
 import { useEffect } from "react";
 import FloatBar from "@/components/FloatBar";
 import EmblaCarousel from "../../Home/components/carrossel/EmblaCarousel";
 import FormSections from "@/pages/shareACoke/components/FormSections";
+// @ts-ignore
 const OPTIONS: EmblaOptionsType = { loop: true };
+// @ts-ignore
 const SLIDE_COUNT = 5;
+// @ts-ignore
 const SLIDES: any = [];
 
 export default function lollapalooza() {
@@ -27,20 +21,13 @@ export default function lollapalooza() {
     script.setAttribute("async", "");
     document.body.appendChild(script);
   }, []);
+  // @ts-ignore
   type PropType = {
     slides: any;
     options?: EmblaOptionsType;
-  };
+  }; // @ts-ignore
   const [emblaRef, emblaApi] = useEmblaCarousel();
 
-  const { selectedIndex, scrollSnaps, onDotButtonClick } =
-    useDotButton(emblaApi);
-  const {
-    prevBtnDisabled,
-    nextBtnDisabled,
-    onPrevButtonClick,
-    onNextButtonClick,
-  } = usePrevNextButtons(emblaApi);
   const [isPlaying, setIsPlaying] = useState(false);
 
   const handlePlayVideo: MouseEventHandler<HTMLDivElement> | undefined = () => {
@@ -185,90 +172,6 @@ export default function lollapalooza() {
               </span>
             </div>
           )}
-        </section>
-        <section className="flex flex-col items-center text-center">
-          <h2 className="title-section">Reviva a magia do Lollapalooza 2025</h2>
-        </section>
-        <section className="embla w-full max-w-screen overflow-hidden mx-auto ">
-          <div className="embla__viewport" ref={emblaRef}>
-            <div className="embla__container flex">
-              {/* Slide 1 */}
-              <div className="embla__slide flex-[0_0_100%]">
-                <div className="embla__slide__number w-full md:min-h-[56.25rem]!">
-                  <blockquote
-                    className="instagram-media"
-                    data-instgrm-permalink="https://www.instagram.com/reel/DICz6GcMmXB/?utm_source=ig_embed&ig_rid=7a1bb4d2-4fb0-4a66-99f6-5b34f1638043&ig_mid=B8E10520-606E-46C4-96E1-92C963A64CF0"
-                    data-instgrm-version="14"
-                    style={{
-                      background: "#FFF",
-                      border: 0,
-                      margin: "1em auto",
-                      maxWidth: 540,
-                      width: "100%",
-                    }}></blockquote>
-                </div>
-              </div>
-
-              {/* Slide 2 */}
-              <div className="embla__slide flex-[0_0_100%]">
-                <div className="embla__slide__number w-full md:min-h-[56.25rem]!">
-                  <blockquote
-                    className="instagram-media"
-                    data-instgrm-permalink="https://www.instagram.com/p/DH2QPnDNGx7/"
-                    data-instgrm-version="14"
-                    style={{
-                      background: "#FFF",
-                      border: 0,
-                      margin: "1em auto",
-                      maxWidth: 540,
-                      width: "100%",
-                    }}></blockquote>
-                </div>
-              </div>
-
-              {/* Slide 3 */}
-              <div className="embla__slide flex-[0_0_100%]">
-                <div className="embla__slide__number w-full md:min-h-[56.25rem]!">
-                  <blockquote
-                    className="instagram-media"
-                    data-instgrm-permalink="https://www.instagram.com/p/DH_K1MpRc8B/"
-                    data-instgrm-version="14"
-                    style={{
-                      background: "#FFF",
-                      border: 0,
-                      margin: "1em auto",
-                      maxWidth: 540,
-                      width: "100%",
-                    }}></blockquote>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Navigation Buttons & Dots */}
-          <div className="embla__controls">
-            <div className="embla__buttons">
-              <PrevButton
-                onClick={onPrevButtonClick}
-                disabled={prevBtnDisabled}
-              />
-              <NextButton
-                onClick={onNextButtonClick}
-                disabled={nextBtnDisabled}
-              />
-            </div>
-            <div className="embla__dots">
-              {scrollSnaps.map((_, index) => (
-                <DotButton
-                  key={index}
-                  onClick={() => onDotButtonClick(index)}
-                  className={`embla__dot${
-                    index === selectedIndex ? " embla__dot--selected" : ""
-                  }`}
-                />
-              ))}
-            </div>
-          </div>
         </section>
       </div>
     </div>

@@ -8,8 +8,11 @@ import CardDefault from "@/components/CardDefault";
 import SectionFloatContent from "@/components/SectionFloatContent";
 import CokeStudioTeam from "./components/CokeStudioTeam";
 import FloatBar from "@/components/FloatBar";
+// @ts-ignore
 const OPTIONS: EmblaOptionsType = { loop: true };
+// @ts-ignore
 const SLIDE_COUNT = 5;
+// @ts-ignore
 const SLIDES: any = [];
 
 export default function CokeStudio() {
@@ -194,8 +197,8 @@ export default function CokeStudio() {
         span="A nossa DJ superstar vai dar um giro pela sua vida nessa sessão de perguntas e respostas com seus fãs, mais um momento exclusivo que você só encontra no Coke Studio."
         urlButton="#"
         textButton="Saiba mais"
-        extraClassSection="flex-col"
-        extraClassDiv="-top-10"
+        extraClassSection="flex-col xl:flex-row"
+        extraClassDiv="-top-10 xl:top-0! xl:-ml-10"
       />
       <CokeStudioTeam />
     </div>
