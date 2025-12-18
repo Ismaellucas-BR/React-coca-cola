@@ -2,13 +2,16 @@ import { ChevronRight } from "lucide-react";
 import MenuMobile from "./MenuMobile";
 import { Link } from "react-router";
 
+import CokeCompanyLogoBlack from "../assets/CokeCompanyLogoBlack.webp";
+
 export default function Header() {
   return (
-    <header className="bg-white w-full flex justify-center items-center relative z-50">
+    <header className="sticky top-0 z-50 bg-white w-full flex justify-center items-center">
       <div className="flex justify-between items-center px-5 w-full xl:max-w-[80rem]">
         <Link to="/">
           <img
-            src="https://www.coca-cola.com/content/dam/onexp/global/icons/Coke-company-logo-black.svg"
+            src={CokeCompanyLogoBlack}
+            className="h-[20px] w-[125px]"
             alt="logo escrito: the coca-cola company"
           />
         </Link>
@@ -17,7 +20,6 @@ export default function Header() {
           <li className="flex items-center cursor-pointer font-semibold h-14 border-b-4 border-transparent hover:border-black transition-all duration-200">
             <Link to="/brands">Marcas</Link>
           </li>
-          {/* ITEM COM DROPDOWN */}
           <li className="relative group">
             <div className="flex items-center gap-1 border-b-4 border-transparent group-hover:border-black transition-all duration-200 h-14">
               <span className="font-semibold">
@@ -28,8 +30,6 @@ export default function Header() {
                 className="transition-transform duration-300 group-hover:rotate-90"
               />
             </div>
-
-            {/* DROPDOWN */}
             <ul className="absolute left-0 top-12 mt-2 w-60 bg-white shadow-lg p-4 space-y-2 hidden group-hover:block min-w-max rounded-md z-40">
               <li className="flex items-center gap-3 hover:font-semibold cursor-pointer group/item">
                 <Link to="share-a-coke"> Compartilhe uma Coca‑Cola</Link>
@@ -51,8 +51,6 @@ export default function Header() {
               </li>
             </ul>
           </li>
-
-          {/* OUTROS ITENS */}
           <li className="flex items-center cursor-pointer font-semibold h-14 border-b-4 border-transparent hover:border-black transition-all duration-200">
             <Link to="sustainability"> Sustentabilidade</Link>
           </li>
@@ -64,8 +62,6 @@ export default function Header() {
                 className="transition-transform duration-300 group-hover:rotate-90"
               />
             </div>
-
-            {/* DROPDOWN */}
             <ul className="absolute left-0 top-12 mt-2 w-60 bg-white shadow-lg p-4 space-y-2 hidden group-hover:block min-w-max rounded-md">
               <li className="flex items-center gap-3 hover:font-semibold cursor-pointer group/item">
                 <Link to="/sobre-nos/nos-conheca"> Nos Conheca</Link>
@@ -85,8 +81,6 @@ export default function Header() {
             </ul>
           </li>
         </ul>
-
-        {/* MENU MOBILE */}
         <div className="lg:hidden">
           <MenuMobile />
         </div>

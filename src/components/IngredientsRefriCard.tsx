@@ -33,11 +33,9 @@ export default function IngredientsRefriCard(props: PropsIngredientsCard) {
       </div>
 
       {/* Renderiza todos os itens dinamicamente */}
-      <div className="flex flex-col gap-3 border-b border-gray-200">
+      <div className="flex flex-col gap-3 border-y border-gray-200 py-3">
         {props.items.map((item, index) => (
-          <div
-            key={index}
-            className="flex justify-between gap-3 border-b border-gray-200">
+          <div key={index} className="flex justify-between gap-3 ">
             <div className="flex gap-2">
               {item.title} {item.number}
             </div>
@@ -48,11 +46,13 @@ export default function IngredientsRefriCard(props: PropsIngredientsCard) {
 
       {props.ingredientes && (
         <div>
-          <h2 className="title-section">Ingredientes</h2>
-          <span className="content-section border-b border-gray-200 pb-5">
-            Não contém quantidade significativa de proteína, gorduras total,
-            gorduras saturada, gorduras trans e fibra alimentar
-          </span>
+          <div className="flex flex-col gap-3 pt-5">
+            <h2 className="title-section">Ingredientes</h2>
+            <span className="content-section border-b border-gray-200 pb-5">
+              Não contém quantidade significativa de proteína, gorduras total,
+              gorduras saturada, gorduras trans e fibra alimentar
+            </span>
+          </div>
           <span className="content-section">
             Valores diários com base em uma dieta de 2000 kcal ou 8400kj. Seus
             valores diários podem ser maiores ou menores dependendo de suas

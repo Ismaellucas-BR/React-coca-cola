@@ -4,12 +4,14 @@ interface PropsSectionFloatContent {
   span: string;
   urlButton?: string;
   textButton?: string;
+  openInNewTab?: boolean;
   alt: string;
   havePreTitle?: boolean;
   preTitle?: string;
   extraClassSection?: string;
   extraClassDiv?: string;
 }
+
 export default function SectionFloatContent(props: PropsSectionFloatContent) {
   return (
     <section
@@ -32,7 +34,17 @@ export default function SectionFloatContent(props: PropsSectionFloatContent) {
           <span className="content-section">{props.span}</span>
         </div>
         {props.urlButton && (
-          <a href={props.urlButton} className="button-default w-max!">
+          <a
+            href={props.urlButton}
+            onClick={(e) => {
+              if (!props.openInNewTab) {
+                e.preventDefault();
+                window.location.href = props.urlButton!;
+              }
+            }}
+            target={props.openInNewTab ? "_blank" : undefined}
+            rel={props.openInNewTab ? "noopener noreferrer" : undefined}
+            className="button-default w-max!">
             {props.textButton}
           </a>
         )}

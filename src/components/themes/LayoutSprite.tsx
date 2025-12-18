@@ -3,17 +3,18 @@ import Header from "../Header";
 import Footer from "../Footer";
 import AlertHome from "../AlertHome";
 import HeaderFantaOrSprite from "../HeaderFantaOrSprite";
+import FloatBar from "@/pages/sprite/FloatBar";
+
+import BrSpriteLogo from "../../assets/Sprite/BrSpriteLogo.webp";
 
 const LayoutSprite = () => {
   return (
     <div className="flex flex-col items-center justify-center">
       <Header />
       <AlertHome />
-      <HeaderFantaOrSprite
-        urlImage="https://www.coca-cola.com/content/dam/onexp/br/pt/brands/sprite/br_sprite_logo.png"
-        alt="Logomarca da Sprite"
-      />
-      <main className="flex flex-col items-center gap-5">
+      <HeaderFantaOrSprite urlImage={BrSpriteLogo} alt="Logomarca da Sprite" />
+      <main className=" relative flex flex-col items-center gap-10 pt-12">
+        <FloatBar />
         <Outlet />
       </main>
       <Footer />

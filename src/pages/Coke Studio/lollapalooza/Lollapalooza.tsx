@@ -7,6 +7,11 @@ import { useEffect } from "react";
 import FloatBar from "@/components/FloatBar";
 import EmblaCarousel from "../../Home/components/carrossel/EmblaCarousel";
 import FormSections from "@/pages/shareACoke/components/FormSections";
+import Lolla2025Hero1 from "../../../assets/ShareACoke/lolla/Lolla2025Hero1.webp";
+import Lolla2025Hero1Mobile from "../../../assets/ShareACoke/lolla/Lolla2025Hero1Mobile.webp";
+import Lolla25JaoBannerDesktop from "../../../assets/ShareACoke/lolla/Lolla25JaoBannerDesktop.webp";
+import Lolla25JaoBannerMobile from "../../../assets/ShareACoke/lolla/Lolla25JaoBannerMobile.webp";
+import GanadorContentCard from "../../../assets/ShareACoke/lolla/GanadorContentCard.webp";
 // @ts-ignore
 const OPTIONS: EmblaOptionsType = { loop: true };
 // @ts-ignore
@@ -57,30 +62,24 @@ export default function lollapalooza() {
         options={{ loop: true }}
         slides={[
           {
-            bgDesktop:
-              "https://www.coca-cola.com/content/dam/onexp/ar/es/offerings/coke-studio-24/lolla-2025/xonexp_ar_tccc_cctm_verano2025_heronuevo_1440x810.jpg/width3840.jpg",
-            bgMobile:
-              "https://www.coca-cola.com/content/dam/onexp/ar/es/offerings/coke-studio-24/lolla-2025/xonexp_ar_tccc_cctm_verano2025_heronuevo_1440x2560.jpg/width1024.jpg",
+            bgDesktop: Lolla2025Hero1,
+            bgMobile: Lolla2025Hero1Mobile,
             title: "Lollapalooza Brasil: Reviva a Magia!",
             text: "A energia do festival ao seu alcance. Relembre os melhores momentos do LollaBR!",
             buttonText: "",
             buttonLink: "",
           },
           {
-            bgDesktop:
-              "https://www.coca-cola.com/content/dam/onexp/br/pt/offerings/coke-studio-24/lolla-25/jao-exclusive/jao-banner-desktop.jpg/width3840.jpg",
-            bgMobile:
-              "https://www.coca-cola.com/content/dam/onexp/br/pt/offerings/coke-studio-24/lolla-25/jao-exclusive/jao-banner-mobile.jpg/width1024.jpg",
+            bgDesktop: Lolla25JaoBannerDesktop,
+            bgMobile: Lolla25JaoBannerMobile,
             title: "Pov: Jão",
             text: "Viva a jornada criativa de Jão em nossa série exclusiva e descubra a inspiração por trás do seu som único.",
             buttonText: "Saiba mais",
             buttonLink: "#",
           },
           {
-            bgDesktop:
-              "https://www.coca-cola.com/content/dam/onexp/ar/es/offerings/coke-studio-24/lolla-2025/xonexp_ar_tccc_cctm_verano2025_heronuevo_1440x810.jpg/width3840.jpg",
-            bgMobile:
-              "https://www.coca-cola.com/content/dam/onexp/ar/es/offerings/coke-studio-24/lolla-2025/xonexp_ar_tccc_cctm_verano2025_heronuevo_1440x2560.jpg/width1024.jpg",
+            bgDesktop: Lolla2025Hero1,
+            bgMobile: Lolla2025Hero1Mobile,
             title: "Lollapalooza Brasil: Reviva a Magia!",
             text: "A energia do festival ao seu alcance. Relembre os melhores momentos do LollaBR!",
             buttonText: "",
@@ -88,10 +87,8 @@ export default function lollapalooza() {
           },
 
           {
-            bgDesktop:
-              "https://www.coca-cola.com/content/dam/onexp/br/pt/offerings/coke-studio-24/lolla-25/jao-exclusive/jao-banner-desktop.jpg/width3840.jpg",
-            bgMobile:
-              "https://www.coca-cola.com/content/dam/onexp/br/pt/offerings/coke-studio-24/lolla-25/jao-exclusive/jao-banner-mobile.jpg/width1024.jpg",
+            bgDesktop: Lolla25JaoBannerDesktop,
+            bgMobile: Lolla25JaoBannerMobile,
             title: "Pov: Jão",
             text: "Viva a jornada criativa de Jão em nossa série exclusiva e descubra a inspiração por trás do seu som único.",
             buttonText: "Saiba mais",
@@ -99,11 +96,11 @@ export default function lollapalooza() {
           },
         ]}
       />
-      <div className="flex flex-col items-center gap-5 xl:gap-20">
+      <div className="flex flex-col items-center gap-5 xl:gap-10 mt-5 xl:mt-10">
         <h2 className="title-section">Parabéns!</h2>
         <div className="flex flex-col shadow-md rounded-lg w-full lg:w-[22rem] max-w-[90%]">
           <img
-            src="https://www.coca-cola.com/content/dam/onexp/br/pt/offerings/coke-studio-24/ganador_content_card_mobile_1198x_.png/width1960.png"
+            src={GanadorContentCard}
             alt='"Ganhador" em branco sobre um fundo preto com linhas onduladas vermelhas.'
             className="rounded-t-md h-[16.5rem] w-full object-cover md:h-[45rem] lg:h-[16.5rem]"
           />

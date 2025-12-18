@@ -1,6 +1,8 @@
 import SectionFloatContent from "@/components/SectionFloatContent";
 import FormSections from "../shareACoke/components/FormSections";
 
+import Notifyme from "../../assets/Notifyme.webp";
+
 export default function Powerade() {
   return (
     <div className="flex flex-col items-center gap-15 pt-15 lg:gap-5">
@@ -10,7 +12,7 @@ export default function Powerade() {
         span1="Cadastre-se e não perca os próximos eventos, histórias inspiradoras e muito mais para você."
       />
       <SectionFloatContent
-        urlImage="https://www.coca-cola.com/content/dam/onexp/br/pt/offerings/powerade-olympics/notify-me/notifyme_card_powerade_desktop_br.jpg/width1960.jpg"
+        urlImage={Notifyme}
         alt="Ciclista de bicicleta de terno preto, viseiras e capacete"
         title="Dê um respiro para se inspirar"
         span="Motive-se com as histórias de atletas que fazem uma pausa para pegar o impulso perfeito nas nossas redes. Dê uma pausa hoje e conquiste o mundo amanhã."

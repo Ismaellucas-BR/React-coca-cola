@@ -3,6 +3,16 @@ import ComponentDefaultPlusTitle from "@/components/ComponentDefaultPlusTitle";
 import FloatBar from "@/components/FloatBar";
 import MegaBanner from "@/components/MegaBanner";
 import FormSections from "@/pages/shareACoke/components/FormSections";
+import FriendsDrinkingCokeInParkDesktop from "../../../assets/ShareACoke/promos/FriendsDrinkingCokeInParkDesktop.webp";
+import FriendsDrinkingCokeInParkMobile from "../../../assets/ShareACoke/promos/FriendsDrinkingCokeInParkDesktop.webp";
+import FriendsDrinkingCokeAndSmilingInPark from "../../../assets/ShareACoke/promos/FriendsDrinkingCokeAndSmilingInPark.webp";
+import PeggyGouWallpaperGeneric from "../../../assets/CokeStudio/PeggyGouWallpaperGeneric.webp";
+import WallpaperPeggyGouCokeStudio2024 from "../../../assets/CokeStudio/WallpaperPeggyGouCokeStudio2024.webp";
+import AutographPeggyGouCokeStudio2024 from "../../../assets/CokeStudio/AutographPeggyGouCokeStudio2024.webp";
+import KarolGWallpaperGeneric from "../../../assets/CokeStudio/KarolGWallpaperGeneric.webp";
+import WallpaperKarolGCokeStudio2024 from "../../../assets/CokeStudio/WallpaperKarolGCokeStudio2024.webp";
+import NewJeansAutographGeneric from "../../../assets/CokeStudio/NewJeansAutographGeneric.webp";
+import NewjeansAutograph from "../../../assets/CokeStudio/NewjeansAutograph.webp";
 
 export default function Promos() {
   return (
@@ -22,8 +32,8 @@ export default function Promos() {
       </div>
       <div className="flex flex-col items-center gap-5">
         <MegaBanner
-          urlImage="https://www.coca-cola.com/content/dam/onexp/br/pt/offerings/coke-studio-24/hero_cokestudio2024_friends-drinking-coke-in-park_desktop.jpg/width3840.jpg"
-          urlImageMobile="https://www.coca-cola.com/content/dam/onexp/br/pt/offerings/coke-studio-24/hero_cokestudio2024_friends-drinking-coke_mobile.jpg/width500.jpg"
+          urlImage={FriendsDrinkingCokeInParkDesktop}
+          urlImageMobile={FriendsDrinkingCokeInParkMobile}
           title="Promoções
 "
           span="COKE STUDIO 2025"
@@ -31,48 +41,46 @@ export default function Promos() {
         <ComponentDefaultPlusTitle
           titleMain="Promoções disponíveis"
           subTitle="Cadastre-se no Coke Studio para concorrer a prêmios dos seus artistas favoritos! Tá esperando o que?"
-          urlImg="https://www.coca-cola.com/content/dam/onexp/br/pt/offerings/coke-studio-24/43ca6a591987618fbe8a8396421ea7bd.jpeg/width1338.jpeg"
+          urlImg={FriendsDrinkingCokeAndSmilingInPark}
           alt="Imagem promocional com o texto 'Promoção Você VIP no Lolla Brasil', acompanhado dos logotipos da Coca-Cola e do LollapaloozaBrasil. O fundo é preto com linhas vermelhas onduladas, criando um efeito dinâmico."
           titleSecondary="Aumente o volume!"
           span="O Lolla tá chegando! Vem sentir a energia da música, dos palcos e do pessoal com Coca‑Cola e Coke Studio."
-          urlButton="#"
-          textButton="Saiba mais"
-          flexDirection="xl:flex xl:flex-row-reverse"
+          flexDirection="xl:flex xl:flex-row-reverse "
         />
         <ComponentDefaultNoTitle
           flexDirection="xl:flex xl:flex-row-reverse xl:mt-[3.5rem]"
           title="Papel de parede da Peggy Gou"
           span="Pra deixar sua tela do celular eletrizante como as pistas de dança."
-          urlButton="#"
+          urlButton={WallpaperPeggyGouCokeStudio2024}
           textButton="Eu quero"
-          urlImage="https://www.coca-cola.com/content/dam/onexp/global/central/offerings/coke-studio-2024/general-card_cokestudio2024_peggy-gou-wallpaper_generic.jpg/width1960.jpg"
+          urlImage={PeggyGouWallpaperGeneric}
           alt="Peggy Gou posando para foto"
         />
         <ComponentDefaultNoTitle
           flexDirection="flex-row xl:mt-[3.5rem]"
           title="Autógrafo digital da Peggy Gou"
           span="Aqui você encontra uma foto autografada para mostrar todo seu amor de fã pela Peggy."
-          urlButton="#"
+          urlButton={AutographPeggyGouCokeStudio2024}
           textButton="Eu quero"
-          urlImage="https://www.coca-cola.com/content/dam/onexp/global/central/offerings/coke-studio-2024/general-card_cokestudio2024_peggy-gou-autograph_generic.jpg/width1960.jpg"
+          urlImage={PeggyGouWallpaperGeneric}
           alt="Mulher (Peggy) segurando uma garrafa de coca-cola"
         />
         <ComponentDefaultNoTitle
           flexDirection="xl:flex xl:flex-row-reverse xl:mt-[3.5rem]"
           title="Deixe sua tela no estilo com o papel de parede da Karol G"
           span="Um presente que todo fã de verdade da Karol G vai querer ter."
-          urlButton="#"
+          urlButton={WallpaperKarolGCokeStudio2024}
           textButton="Eu quero"
-          urlImage="https://www.coca-cola.com/content/dam/onexp/global/central/offerings/coke-studio-2024/general-card_cokestudio2024_karol-g-wallpaper_generic.jpg/width1960.jpg"
+          urlImage={KarolGWallpaperGeneric}
           alt="Karol G posando para foto"
         />
         <ComponentDefaultNoTitle
           flexDirection="flex-row xl:mt-[3.5rem]"
           title="Foto Autografada com NewJeans no Coke Studio"
           span="Baixe já sua foto do NewJeans no Coke Studio, assinado pelo grupo."
-          urlButton="#"
+          urlButton={NewjeansAutograph}
           textButton="Eu quero"
-          urlImage="https://www.coca-cola.com/content/dam/onexp/br/pt/offerings/coke-studio-24/general-card_cokestudio2024_new-jeans-autograph-generic.jpg/width1960.jpg"
+          urlImage={NewJeansAutographGeneric}
           alt="NewJeans posando para foto"
         />
         <FormSections

@@ -17,6 +17,9 @@ import KnowUs from "./pages/About_us/KnowUs";
 import Purpose from "./pages/About_us/Purpose";
 import LayoutSprite from "./components/themes/LayoutSprite";
 import SpriteIndex from "./pages/sprite/index";
+import Summer from "./pages/sprite/Summer";
+import AtHome from "./pages/sprite/AtHome";
+import InTheStreet from "./pages/sprite/InTheStreet";
 
 const root: HTMLElement | null = document.getElementById("root");
 
@@ -44,6 +47,9 @@ ReactDOM.createRoot(root!).render(
       </Route>
       <Route element={<LayoutSprite />}>
         <Route path="brands/sprite" element={<SpriteIndex />} />
+        <Route path="brands/sprite/sprite-e-verao" element={<Summer />} />
+        <Route path="brands/sprite/athome" element={<AtHome />} />
+        <Route path="brands/sprite/inthestreet" element={<InTheStreet />} />
       </Route>
     </Routes>
   </BrowserRouter>

@@ -1,9 +1,10 @@
+import BrasilCardSpotify from "../../../assets/ShareACoke/BrasilCardSpotify.webp";
 export default function ThirdSection() {
   return (
     <section className="section-main gap-5  lg:!flex-row lg:w-full lg:gap-28 lg:max-w-[70rem]">
       <div className="lg:w-2/4">
         <img
-          src="https://www.coca-cola.com/content/dam/onexp/br/pt/offerings/share-a-coke/brasil_card_spotify.jpg/width3840.jpg"
+          src={BrasilCardSpotify}
           alt="Tres pessoas brindando com coca-cola"
           className="rounded-lg lg:w-full"
         />

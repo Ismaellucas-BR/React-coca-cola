@@ -11,6 +11,7 @@ export type Slide = {
   buttonText?: string;
   buttonLink?: string;
   videoUrl?: string;
+  extraClass?: string;
 };
 
 type PropType = {
@@ -41,11 +42,10 @@ const EmblaCarousel: React.FC<PropType> = ({ slides, options }) => {
               {slide.videoUrl ? (
                 <div className="embla__slide__number w-full min-h-[34.375rem]">
                   <iframe
-                    className="w-full h-full rounded-3xl"
+                    className="w-full h-full rounded-3xl pointer-events-none"
                     src={slide.videoUrl}
                     title={`Video Slide ${index}`}
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowFullScreen></iframe>
+                    allow="autoplay; encrypted-media; picture-in-picture"></iframe>
                 </div>
               ) : (
                 <div
@@ -54,7 +54,8 @@ const EmblaCarousel: React.FC<PropType> = ({ slides, options }) => {
                     backgroundImage: `url('${getBackground(slide)}')`,
                   }}>
                   <div className="absolute inset-0 bg-black/30 z-0 rounded-lg" />
-                  <div className="relative flex flex-col items-center justify-end w-full h-full text-center gap-4 pb-1.5 text-white font-Noto z-10 lg:ml-15 lg:w-1/2 lg:justify-center lg:text-left lg:items-start nv:w-1/3">
+                  <div
+                    className={`relative flex flex-col items-center justify-end w-full h-full text-center gap-4 pb-1.5 text-white font-Noto z-10 lg:ml-15 lg:w-1/2 lg:justify-center lg:text-left lg:items-start nv:w-1/3 ${slide.extraClass}`}>
                     {slide.title && (
                       <h2 className="text-[1.57rem] lg:text-[2.375rem] leading-8 lg:leading-none font-bold">
                         {slide.title}

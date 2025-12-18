@@ -1,11 +1,10 @@
-import { Link } from "react-router";
-
 interface PropsSectionNoTitleMain {
   urlImage: string;
   title: string;
   span: string;
   urlButton?: string;
   textButton?: string;
+  openInNewTab?: boolean;
   flexDirection: string;
   alt: string;
 }
@@ -27,9 +26,19 @@ export default function ComponentDefaultNoTitle(
         <h2 className="title-section">{props.title}</h2>
         <span className="content-section">{props.span}</span>
         {props.urlButton && (
-          <Link to={props.urlButton} target="_blank" className="button-default">
+          <a
+            href={props.urlButton}
+            onClick={(e) => {
+              if (!props.openInNewTab) {
+                e.preventDefault();
+                window.location.href = props.urlButton!;
+              }
+            }}
+            target={props.openInNewTab ? "_blank" : undefined}
+            rel={props.openInNewTab ? "noopener noreferrer" : undefined}
+            className="button-default">
             {props.textButton}
-          </Link>
+          </a>
         )}
       </div>
     </section>

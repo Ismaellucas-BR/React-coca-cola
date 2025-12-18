@@ -1,5 +1,8 @@
 import SectionFloatContent from "@/components/SectionFloatContent";
-
+import PropositoEVisao from "../../assets/AboutUs/Purpose/PropositoEVisao.webp";
+import CocaColaCompanyPurposeSummary from "../../assets/AboutUs/Purpose/CocaColaCompanyPurposeSummary.pdf";
+import PropositoEVisao2 from "../../assets/AboutUs/Purpose/PropositoEVisao2.webp";
+import JamesQuinceyLetterToEmployees from "../../assets/AboutUs/Purpose/JamesQuinceyLetterToEmployees.pdf";
 export default function Purpose() {
   return (
     <div className="flex flex-col gap-8 pb-10 w-full justify-center items-center  py-10 xl:max-w-[70rem]">
@@ -24,20 +27,22 @@ export default function Purpose() {
         <SectionFloatContent
           title="Quem somos"
           span="Saiba mais sobre o propósito e visão da nossa companhia."
-          urlImage="https://www.coca-cola.com/content/dam/onexp/br/pt/about-us/proposito-e-visao/1.jpg/width1024.jpg"
+          urlImage={PropositoEVisao}
+          openInNewTab
           alt=""
           textButton="Leia mais"
-          urlButton="https://www.coca-colacompany.com/content/dam/company/us/en/about-us/purpose-vision/coca-cola-company-purpose-summary.pdf"
+          urlButton={CocaColaCompanyPurposeSummary}
           extraClassSection="justify-center items-center flex-col-reverse xl:flex-row"
           extraClassDiv="max-w-[90%] md:w-full lg:-mb-30 xl:-ml-30"
         />
         <SectionFloatContent
           title="Carta aos Funcionários do Presidente e CEO James Quincey"
           span="O propósito está no centro da estratégia de negócios da The Coca‑Cola Company. Saiba mais sobre nosso propósito e visão corporativa em uma carta compartilhada pelo principal executivo da empresa com funcionários ao redor do mundo."
-          urlImage="https://www.coca-cola.com/content/dam/onexp/br/pt/about-us/proposito-e-visao/2.jpg/width1960.jpg"
+          urlImage={PropositoEVisao2}
+          openInNewTab
           alt=""
           textButton="Leia a carta"
-          urlButton="https://www.coca-colacompany.com/content/dam/company/us/en/about-us/purpose-vision/james-quincey-letter-to-employees-coca-cola-company-purpose-dec-2023.pdf"
+          urlButton={JamesQuinceyLetterToEmployees}
           extraClassSection="justify-center items-center flex-col-reverse xl:flex-row-reverse"
           extraClassDiv="max-w-[90%] md:w-full lg:-mb-30 xl:-mr-30"
         />

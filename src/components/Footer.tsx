@@ -1,14 +1,15 @@
 import { GithubLogo } from "@phosphor-icons/react";
 import { SquareArrowOutUpRight } from "lucide-react";
 import { Link } from "react-router";
-
+import LogoWhiteLarge from "../assets/LogoWhiteLarge.webp";
 export default function Footer() {
   return (
     <section className="flex flex-col justify-center items-center bg-black  w-full py-12 ">
       <div className="xl:max-w-[70rem] w-full max-w-[90%]">
         <div className="flex flex-col items-baseline justify-baseline w-full border-b border-white pb-5 gap-5 md:flex-row md:justify-between">
           <img
-            src="https://www.coca-cola.com/content/dam/onexp/global/icons/logo-white-large.svg"
+            src={LogoWhiteLarge}
+            className="w-[249px] h-[40px]"
             alt="Logo coca-cola branco"
           />
           <span className="text-white">Brasil</span>

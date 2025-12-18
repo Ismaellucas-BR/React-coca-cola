@@ -10,9 +10,10 @@ export default function FloatBar() {
     { label: "Experiências", href: "/coke-studio/experiences" },
     { label: "Time", href: "/coke-studio/team" },
   ];
+
   return (
-    <div className="fixed  z-50 max-w-[90%] top-25 lg:mt-5 lg:mb-20 lg:top-24">
-      <ul className="flex gap-5 rounded-lg p-5 bg-black/56 text-white font-Noto font-semibold overflow-scroll scrollbar-hide">
+    <div className="max-w-[90%]">
+      <ul className="flex gap-5 rounded-lg p-5 bg-black/56 text-white font-Noto font-semibold overflow-x-auto scrollbar-hide">
         {links.map((link) => (
           <li key={link.href}>
             <Link

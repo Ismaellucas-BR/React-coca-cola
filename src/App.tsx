@@ -5,6 +5,10 @@ import SecondSection from "./components/ComponentDefaultPlusTitle";
 import SixthSection from "./pages/Home/components/SixthSection";
 import ThirdSection from "./pages/Home/components/ThirdSection";
 
+import SpriteLemon from "./assets/SpriteLemon.webp";
+import LatamSustainability from "./assets/LatamSustainability.webp";
+import CardHomepageLoja from "./assets/CardHomepageLoja.webp";
+
 function App() {
   return (
     <main className="flex flex-col items-center gap-5">
@@ -14,23 +18,23 @@ function App() {
           titleMain="O que há de novo?"
           titleSecondary="Sprite Lemon Fresh deixa tudo bem mais leve"
           span="Descubra a leveza."
-          urlButton="#"
+          urlButton="/brands/sprite"
           textButton="Saiba mais"
-          urlImg="https://www.coca-cola.com/content/dam/onexp/br/pt/brands/sprite/sprite_lemon.jpg/width1338.jpg"
+          urlImg={SpriteLemon}
           alt="banner promocional da sprite"
           flexDirection="flex xl:flex-row"
         />
         <ThirdSection />
         <SectionFloatContent
           havePreTitle={false}
-          urlImage="https://www.coca-cola.com/content/dam/onexp/br/pt/homepage/sust-and-social/v2/latam_home_sustainability_campaign%20card_1280x1024_v2.jpg/width1960.jpg"
+          urlImage={LatamSustainability}
           alt="Rio com mato e montanhas ao fundo"
           title="Sustentabilidade"
           span="A longevidade da Coca‑Cola Brasil só é possível se a
               nossa forma de trabalhar trouxer ganhos para a sociedade e o
               planeta. É imprescindível crescer de forma consciente e
               sustentável"
-          urlButton="#"
+          urlButton="/sustainability"
           textButton="Entenda melhor"
           extraClassSection="flex-col-reverse xl:flex-row w-[90%]"
           extraClassDiv="-bottom-10 xl:-bottom-10! xl:-ml-10"
@@ -40,9 +44,7 @@ function App() {
           title="Encontre Seu Estilo na Loja Coca‑Cola"
           span="Descubra o merchandising oficial na Loja Coca‑Cola. Uma coleção única
           para você celebrar a sua conexão com a felicidade!"
-          urlButton="#"
-          textButton="Entre na Loja"
-          urlImage="https://www.coca-cola.com/content/dam/onexp/br/pt/br-site-loja/card_homepage_loja_br.jpg/width500.jpg"
+          urlImage={CardHomepageLoja}
           alt="homem andando de skate"
         />
         <SixthSection />

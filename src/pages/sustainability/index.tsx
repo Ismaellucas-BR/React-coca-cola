@@ -4,20 +4,21 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import SustainabilityBannerDesktop from "../../assets/sustainability/SustainabilityBannerDesktop.webp";
+import SustainabilityBannerMobile from "../../assets/sustainability/SustainabilityBannerMobile.webp";
+import BannerAgua from "../../assets/sustainability/BannerAgua.webp";
+import Empaques from "../../assets/sustainability/Empaques.webp";
+import PortafolioDeProductos from "../../assets/sustainability/PortafolioDeProductos.webp";
 export default function Sustainability() {
   return (
     <div className="flex flex-col gap-8 pb-10 w-full justify-center items-center">
       <div className="flex w-full justify-center">
         <img
-          src="https://www.coca-cola.com/content/dam/onexp/br/pt/sustainability/new-sustainability/coca_banner-desktop_1440x8101.jpg/width1960.jpg"
+          src={SustainabilityBannerDesktop}
           alt=""
           className="hidden lg:flex"
         />
-        <img
-          src="https://www.coca-cola.com/content/dam/onexp/br/pt/sustainability/new-sustainability/banner_mobile_sust.jpg/width1024.jpg"
-          alt=""
-          className=" lg:hidden"
-        />
+        <img src={SustainabilityBannerMobile} alt="" className=" lg:hidden" />
       </div>
       <section className=" flex flex-col justify-center items-center gap-8 max-w-[90%] xl:max-w-[70rem] xl:pt-5">
         <div className="flex flex-col justify-center items-center text-center gap-3 xl:gap-5">
@@ -34,7 +35,7 @@ export default function Sustainability() {
         <div className="flex flex-col gap-5 xl:flex-row xl:gap-10">
           <div className="flex flex-col gap-5 xl:w-1/3">
             <img
-              src="https://www.coca-cola.com/content/dam/onexp/br/pt/sustainability/actualizacion-dec-2024/banner_agua.png/width3840.png"
+              src={BannerAgua}
               alt="Água."
               className="rounded-2xl border-b-[50px] border-white"
             />
@@ -85,7 +86,7 @@ export default function Sustainability() {
           </div>
           <div className="flex flex-col gap-5 xl:w-1/3">
             <img
-              src="https://www.coca-cola.com/content/dam/onexp/mx/es/sustainability/sustainability-new/empaques.png/width1024.png"
+              src={Empaques}
               alt="Água."
               className="rounded-2xl border-b-[50px] border-white"
             />
@@ -136,7 +137,7 @@ export default function Sustainability() {
           </div>
           <div className="flex flex-col gap-5 xl:w-1/3">
             <img
-              src="https://www.coca-cola.com/content/dam/onexp/mx/es/sustainability/sustainability-new/portafolio-de-productos.png/width1024.png"
+              src={PortafolioDeProductos}
               alt="Água."
               className="rounded-2xl border-b-[50px] border-white"
             />
