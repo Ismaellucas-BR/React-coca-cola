@@ -1,4 +1,5 @@
 import { ArrowRight } from "@phosphor-icons/react/dist/ssr";
+import { useTranslation } from "react-i18next";
 interface CardProps {
   urlImage: string;
   titleCard: string;
@@ -16,6 +17,7 @@ export default function Card({
   hCard,
   buttonText,
 }: CardProps) {
+  const { t } = useTranslation("common");
   return (
     <div className="w-full rounded-md shadow-md bg-white">
       <img
@@ -33,7 +35,7 @@ export default function Card({
         <a
           href={urlAncora}
           className="flex gap-1.5 items-center font-Noto font-bold text-[1.1rem] underline mt-4 arrowAfter">
-          {buttonText && buttonText.trim() !== "" ? buttonText : "Saiba mais"}
+          {buttonText && buttonText.trim() !== "" ? buttonText : t("LearnMore")}
           <ArrowRight className="fill-black" size={18} />
         </a>
       </div>

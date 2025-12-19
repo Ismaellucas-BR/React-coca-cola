@@ -11,6 +11,8 @@ import AdesLogo from "../../assets/Brands/AdesLogo.webp";
 import SchweppesLogo from "../../assets/Brands/SchweppesLogo.webp";
 import LogoPwd from "../../assets/Brands/LogoPwd.webp";
 
+import { useTranslation } from "react-i18next";
+
 const brands = [
   CokeLogo,
   SpriteLogo,
@@ -27,9 +29,10 @@ const brands = [
 ];
 
 export default function BrandsComponent() {
+  const { t } = useTranslation("brands");
   return (
     <section className="flex flex-col justify-center items-center px-5 pb-14 gap-8 pt-10 md:gap-8 lg:max-w-[70rem] lg:pt-14 lg:pb-20">
-      <h1 className="title-section">Explore Nossas Marcas</h1>
+      <h1 className="title-section">{t("ExploreOurBrands")}</h1>
       <div className="flex flex-wrap justify-center gap-4 lg:gap-8">
         {brands.map((brand) => (
           <div className="flex justify-center items-center h-[11.25rem] w-[11.25rem] bg-white p-5 md:h-[22rem] md:w-[22rem] shadow-lg rounded-md  lg:w-[14rem] lg:h-[14rem] hover:scale-105 transition-transform">

@@ -3,6 +3,7 @@ import MenuMobile from "./MenuMobile";
 import { Link } from "react-router";
 
 import CokeCompanyLogoBlack from "../assets/CokeCompanyLogoBlack.webp";
+import LanguageSwitcher from "./translation/LanguageSwitcher";
 
 export default function Header() {
   return (
@@ -16,7 +17,7 @@ export default function Header() {
           />
         </Link>
 
-        <ul className="hidden lg:flex gap-8 font-Noto text-black relative">
+        <ul className="hidden lg:flex justify-center items-center gap-8 font-Noto text-black relative">
           <li className="flex items-center cursor-pointer font-semibold h-14 border-b-4 border-transparent hover:border-black transition-all duration-200">
             <Link to="/brands">Marcas</Link>
           </li>
@@ -79,6 +80,9 @@ export default function Header() {
                 </div>
               </li>
             </ul>
+          </li>
+          <li>
+            <LanguageSwitcher />
           </li>
         </ul>
         <div className="lg:hidden">

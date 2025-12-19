@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { Alert, AlertTitle, AlertDescription } from "@/components/ui/alert";
 
+import { useTranslation } from "react-i18next";
+
 interface PropsForm {
   title: string;
   span1: string;
@@ -29,19 +31,20 @@ export default function FormSections(props: PropsForm) {
     terms;
 
   function handleSubmit(e: React.FormEvent) {
+    const { t } = useTranslation("FormSection");
     e.preventDefault();
 
     if (!isFormValid) {
       setAlert({
         type: "warning",
-        message: "Preencha todos os campos obrigatórios.",
+        message: t("PleaseFillFields."),
       });
       return;
     }
 
     setAlert({
       type: "success",
-      message: "Formulário enviado com sucesso!",
+      message: t("FormSubmittedSuccessfully"),
     });
 
     // Reset opcional
@@ -59,6 +62,7 @@ export default function FormSections(props: PropsForm) {
     }
   }, [alert]);
 
+  const { t } = useTranslation("FormSection");
   return (
     <>
       {/* ALERT */}
@@ -89,16 +93,16 @@ export default function FormSections(props: PropsForm) {
         <div className="flex flex-col gap-2 font-Noto text-base">
           <h2 className="title-section">{props.title}</h2>
           <span>{props.span1}</span>
-          <span>Os campos marcados com asterisco (*) são obrigatórios.</span>
+          <span>{t("FieldsMarked")}</span>
         </div>
 
         <form onSubmit={handleSubmit} className="flex flex-col gap-7 mt-7">
           <div className="div-form">
-            <label className="font-Noto text-[0.8rem]">Nome*</label>
+            <label className="font-Noto text-[0.8rem]">{t("Name")}</label>
             <input
               type="text"
               value={name}
-              placeholder="Nome"
+              placeholder={t("Name")}
               onChange={(e) => {
                 const onlyLetters = e.target.value.replace(
                   /[^A-Za-zÀ-ÖØ-öø-ÿ\s]/g,
@@ -112,20 +116,20 @@ export default function FormSections(props: PropsForm) {
 
           <div className="div-form">
             <label className="font-Noto text-[0.8rem]">
-              Endereço de email*
+              {t("EmailAddress")}
             </label>
             <input
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="Email"
+              placeholder={t("EmailAddress")}
               className="input-form p-2 border rounded"
             />
           </div>
 
           <div className="div-form">
             <label className="font-Noto text-[0.8rem]">
-              Data de nascimento*
+              {t("DateOfBirth")}
             </label>
             <input
               type="date"
@@ -146,10 +150,7 @@ export default function FormSections(props: PropsForm) {
               <span className="pointer-events-none absolute left-[6px] top-[2px] text-white text-sm peer-checked:opacity-100 opacity-0 transition-opacity">
                 ✔
               </span>
-              <span>
-                Concordo em receber comunicações sobre promoções e marcas da
-                Coca-Cola.
-              </span>
+              <span>{t("IAgreeToReceiveCommunications")}</span>
             </label>
 
             <label className="relative flex items-start gap-3 mt-4 cursor-pointer font-Noto text-lg">
@@ -163,19 +164,19 @@ export default function FormSections(props: PropsForm) {
                 ✔
               </span>
               <span>
-                Li e aceito os{" "}
+                {t("IHaveRead")}{" "}
                 <a
                   href="/termos.html"
                   target="_blank"
                   className="text-black font-bold underline">
-                  Termos de Uso
+                  {t("TermsOfUse")}
                 </a>{" "}
-                e a{" "}
+                {t("AndThe")}{" "}
                 <a
                   href="/termos.html"
                   target="_blank"
                   className="text-black font-bold underline">
-                  Política de Privacidade
+                  {t("PrivacyPolicy")}
                 </a>
                 .
               </span>
@@ -191,7 +192,7 @@ export default function FormSections(props: PropsForm) {
                   ? "bg-blue-600 text-white hover:bg-blue-700 cursor-pointer"
                   : "bg-gray-300 text-gray-500 cursor-not-allowed"
               }`}>
-            Enviar
+            {t("ToSend")}
           </button>
         </form>
       </section>

@@ -1,0 +1,16 @@
+{
+  "StayInformedAboutEverything": "Fique por dentro de tudo!",
+  "BeTheFirst": "Seja o primeiro a receber novidades e participar de novas experiências junto com a Coca-Cola.",
+  "PleaseFillFields.": "Preencha todos os campos obrigatórios.",
+  "FormSubmittedSuccessfully": "Formulário enviado com sucesso!",
+  "FieldsMarked": "Os campos marcados com asterisco (*) são obrigatórios.",
+  "Name": "Nome*",
+  "EmailAddress": "Endereço de email*",
+  "DateOfBirth": "Data de nascimento*",
+  "IAgreeToReceiveCommunications": "Concordo em receber comunicações sobre promoções e marcas da Coca-Cola.",
+  "IHaveRead": "Li e aceito os",
+  "TermsOfUse": "Termos de Uso",
+  "AndThe": "e a",
+  "PrivacyPolicy": "Política de Privacidade",
+  "ToSend": "Enviar"
+}

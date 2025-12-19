@@ -20,37 +20,41 @@ import SpriteIndex from "./pages/sprite/index";
 import Summer from "./pages/sprite/Summer";
 import AtHome from "./pages/sprite/AtHome";
 import InTheStreet from "./pages/sprite/InTheStreet";
+import { LanguageProvider } from "./components/translation/LanguageContext";
+import "./i18n";
 
 const root: HTMLElement | null = document.getElementById("root");
 
 ReactDOM.createRoot(root!).render(
-  <BrowserRouter>
-    <ScrollToTop />
-    <Routes>
-      <Route element={<Layout />}>
-        <Route path="/" element={<App />} />
-        <Route path="brands" element={<Brands />} />
-        <Route path="share-a-coke" element={<ShareACoke />} />
-        <Route path="coke-studio" element={<CokeStudio />} />
-        <Route path="coke-studio/promos" element={<Promos />} />
-        <Route
-          path="coke-studio/lollapalooza-2025"
-          element={<Lollapalooza />}
-        />
-        <Route path="coke-studio/experiences" element={<Experiences />} />
-        <Route path="coke-studio/team" element={<Team />} />
-        <Route path="powerade-novidades" element={<Powerade />} />
-        <Route path="instituto-coca-cola-brasil" element={<Instituto />} />
-        <Route path="sustainability" element={<Sustainability />} />
-        <Route path="/sobre-nos/nos-conheca" element={<KnowUs />} />
-        <Route path="/sobre-nos/proposito-e-visao" element={<Purpose />} />
-      </Route>
-      <Route element={<LayoutSprite />}>
-        <Route path="brands/sprite" element={<SpriteIndex />} />
-        <Route path="brands/sprite/sprite-e-verao" element={<Summer />} />
-        <Route path="brands/sprite/athome" element={<AtHome />} />
-        <Route path="brands/sprite/inthestreet" element={<InTheStreet />} />
-      </Route>
-    </Routes>
-  </BrowserRouter>
+  <LanguageProvider>
+    <BrowserRouter>
+      <ScrollToTop />
+      <Routes>
+        <Route element={<Layout />}>
+          <Route path="/" element={<App />} />
+          <Route path="brands" element={<Brands />} />
+          <Route path="share-a-coke" element={<ShareACoke />} />
+          <Route path="coke-studio" element={<CokeStudio />} />
+          <Route path="coke-studio/promos" element={<Promos />} />
+          <Route
+            path="coke-studio/lollapalooza-2025"
+            element={<Lollapalooza />}
+          />
+          <Route path="coke-studio/experiences" element={<Experiences />} />
+          <Route path="coke-studio/team" element={<Team />} />
+          <Route path="powerade-novidades" element={<Powerade />} />
+          <Route path="instituto-coca-cola-brasil" element={<Instituto />} />
+          <Route path="sustainability" element={<Sustainability />} />
+          <Route path="/sobre-nos/nos-conheca" element={<KnowUs />} />
+          <Route path="/sobre-nos/proposito-e-visao" element={<Purpose />} />
+        </Route>
+        <Route element={<LayoutSprite />}>
+          <Route path="brands/sprite" element={<SpriteIndex />} />
+          <Route path="brands/sprite/sprite-e-verao" element={<Summer />} />
+          <Route path="brands/sprite/athome" element={<AtHome />} />
+          <Route path="brands/sprite/inthestreet" element={<InTheStreet />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  </LanguageProvider>
 );

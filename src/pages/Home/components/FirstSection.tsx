@@ -1,5 +1,6 @@
 import EmblaCarousel from "./carrossel/EmblaCarousel";
 import { EmblaOptionsType } from "embla-carousel";
+import { useTranslation } from "react-i18next";
 
 import HeroDesktop from "../../../assets/HeroDesktop.webp";
 import HeroMobile from "../../../assets/HeroMobile.webp";
@@ -11,6 +12,7 @@ const SLIDE_COUNT = 5;
 const SLIDES: any = [];
 
 export default function FirstSection() {
+  const { t } = useTranslation(["home", "common"]);
   return (
     <EmblaCarousel
       options={{ loop: true }}
@@ -18,16 +20,16 @@ export default function FirstSection() {
         {
           bgDesktop: HeroDesktop,
           bgMobile: HeroMobile,
-          title: "Descubra os ingredientes para a conexão perfeita:",
-          text: "Latas personalizadas, jogos, músicas e muito mais.",
-          buttonText: "Saiba mais",
+          title: t("home:h1HeroSectionSlide1"),
+          text: t("home:SubTitleHeroSlide1"),
+          buttonText: t("common:LearnMore"),
           buttonLink: "share-a-coke",
         },
         {
           bgDesktop: HeroBannerDesktop,
           bgMobile: HeroBannerDesktop,
-          title: " Um Toque de Frescor Para Seu Dia",
-          text: "Não deixe seu ânimo derreter com sorvete no asfalto, refresque-se!",
+          title: t("home:h1HeroSectionSlide2"),
+          text: t("home:SubTitleHeroSlide2"),
         },
         {
           bgDesktop: HeroNuevo,

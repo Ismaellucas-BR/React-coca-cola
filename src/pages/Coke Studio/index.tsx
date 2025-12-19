@@ -1,6 +1,8 @@
 import EmblaCarousel from "../../pages/Home/components/carrossel/EmblaCarousel";
 import { EmblaOptionsType } from "embla-carousel";
 import { CardProps } from "../../components/CardDefault";
+import { useTranslation } from "react-i18next";
+
 import FormSections from "../shareACoke/components/FormSections";
 import ComponentDefaultPlusTitle from "../../components/ComponentDefaultPlusTitle";
 import ComponentDefaultNoTitle from "../../components/ComponentDefaultNoTitle";
@@ -40,27 +42,25 @@ const SLIDE_COUNT = 5;
 const SLIDES: any = [];
 
 export default function CokeStudio() {
+  const { t } = useTranslation(["CokeStudio", "common"]);
   const cardsContent: CardProps[] = [
     {
       urlImage: PeggyGouWithCoKe,
-      titleCard: "Peggy Gou comanda as pickups na entrevista com o Coke Studio",
-      content:
-        "Descubra o que não pode faltar no camarim da Peggy Gou durante suas turnês enquanto ela responde às perguntas mais quentes nessa entrevista.",
-      alt: "Artista Peggy Gou sorrindo e posando com uma lata de Coca-Cola",
+      titleCard: t("CokeStudio:PeggyGouIsOnTheTurntables"),
+      content: t("CokeStudio:DiscoverWhatsEssential"),
+      alt: t("CokeStudio:ArtistPeggyGouSmiling"),
     },
     {
       urlImage: NewJeansWithCoke,
-      titleCard: "Entrevista com NewJeans no Coke Studio",
-      content:
-        "O pessoal do NewJeans respondeu às perguntas mais populares dos fãs em uma entrevista imperdível diretamente do Coke Studio.",
-      alt: "NewJeans posando juntas, cada uma segurando uma lata de Coca-Cola.",
+      titleCard: t("CokeStudio:InterviewWithNewJeans"),
+      content: t("CokeStudio:TheNewJeansTeamAnswered"),
+      alt: t("CokeStudio:NewJeansPosingTogether"),
     },
     {
       urlImage: NewJeansFans,
-      titleCard: "Coke Studio Ao vivo - part. NewJeans",
-      content:
-        "Assista ao NewJeans performando seu último sucesso direto do Coke Studio Show em Tóquio.",
-      alt: "Grupo de pessoas curtindo Coca-Cola em um evento.",
+      titleCard: t("CokeStudio:CokeStudioLiveNewJeans"),
+      content: t("CokeStudio:WatchNewJeansPerform"),
+      alt: t("CokeStudio:AGroupOfPeople"),
     },
   ];
   return (
@@ -86,94 +86,94 @@ export default function CokeStudio() {
           {
             bgDesktop: HeroImageDesktop,
             bgMobile: HeroImageMobile,
-            title: "Lollapalooza Brasil: Reviva a Magia!",
-            text: "A energia do festival ao seu alcance. Relembre os melhores momentos do LollaBR!",
-            buttonText: "Saiba mais",
+            title: t("CokeStudio:LollapaloozaBrazil"),
+            text: t("CokeStudio:TheFestivalEnergy"),
+            buttonText: t("common:LearnMore"),
             buttonLink: "#",
           },
           {
             bgDesktop: JaoBannerDesktop,
             bgMobile: JaoBannerMobile,
-            title: "Pocket Show do Jão pela Coke Studio",
-            text: "Viva a jornada criativa de Jão em nossa série exclusiva e descubra a inspiração por trás do seu som único.",
-            buttonText: "Saiba mais",
+            title: t("CokeStudio:PocketShow"),
+            text: t("CokeStudio:ExperienceJao"),
+            buttonText: t("common:LearnMore"),
             buttonLink: "#",
           },
           {
             bgDesktop: PeggyGouSmilingDesktop,
             bgMobile: PeggyGouSmilingMobile,
-            title: "Que comece a festa! Peggy Gou tá na pista!",
-            text: "Os melhores beats é ela que toca. Entre no ritmo com Peggy Gou e Coke Studio.",
-            buttonText: "Saiba mais",
+            title: t("CokeStudio:LetThePartyBegin"),
+            text: t("CokeStudio:ShesPlayBestBeats"),
+            buttonText: t("common:LearnMore"),
             buttonLink: "#",
           },
           {
             bgDesktop: karolGPosingDesktop,
             bgMobile: karolGPosingMobile,
-            title: "Aumente o volume... a Karol G chegou!",
-            text: "Fique em sintonia com o Coke Studio para as últimas atualizações inacreditáveis sobre a Karol G.",
-            buttonText: "Saiba mais",
+            title: t("CokeStudio:TurnUpTheVolume"),
+            text: t("CokeStudio:StayTuned"),
+            buttonText: t("common:LearnMore"),
             buttonLink: "#",
           },
           {
             bgDesktop: NewJeansPosingDesktop,
             bgMobile: NewJeansPosingMobile,
-            title: "NewJeans chegou ao time",
-            text: "NewJeans chegou para essa nova temporada do Coke Studio! A magia vai rolar quando o grupo revelar seu novo hit esse ano. Fiquem ligados!",
-            buttonText: "Saiba mais",
+            title: t("CokeStudio:NewJeansJoinedTeam"),
+            text: t("CokeStudio:NewJeansHasArrived"),
+            buttonText: t("common:LearnMore"),
             buttonLink: "#",
           },
         ]}
       />
       <div className="lg:max-w-[46rem] ">
         <FormSections
-          title="Prepare-se para momentos inesquecíveis"
-          span1="Fique de olho para saber dos próximos festivais, novidades, experiências e muito mais com Coke Studio. Assine a newsletter para ter acesso."
+          title={t("CokeStudio:GetReadyForUnforgettable")}
+          span1={t("CokeStudio:StayTunedForUpcoming")}
         />
       </div>
       <div className="flex flex-col items-center gap-5 lg:gap-14">
         <ComponentDefaultPlusTitle
-          titleMain="Promoções"
-          titleSecondary="Autógrafo digital da Peggy Gou"
-          span="Aqui você encontra uma foto autografada para mostrar todo seu amor de fã pela Peggy."
+          titleMain={t("CokeStudio:Promotions")}
+          titleSecondary={t("CokeStudio:PeggyGousDigitalAutograph")}
+          span={t("CokeStudio:HereYoullFind")}
           urlButton={AutographPeggyGouCokeStudio2024}
-          textButton="Eu quero"
+          textButton={t("CokeStudio:IWant")}
           urlImg={PeggyGouAutographGeneric}
-          alt="Mulher (Peggy) segurando uma garrafa de coca-cola"
+          alt={t("CokeStudio:PeggyHoldingACoke")}
           flexDirection="flex-row-reverse"
           FirstSectionPadding="pt-10"
         />
         <ComponentDefaultNoTitle
           flexDirection="flex-row-reverse xl:mt-[.5rem]"
-          title="Papel de parede da Peggy Gou"
-          span="Pra deixar sua tela do celular eletrizante como as pistas de dança."
+          title={t("CokeStudio:PeggyGouWallpaper")}
+          span={t("CokeStudio:ToMakeYourPhone")}
           urlButton={WallpaperPeggyGouCokeStudio2024}
-          textButton="Eu quero"
+          textButton={t("CokeStudio:IWant")}
           urlImage={PeggyGouWallpaperGeneric}
-          alt="Peggy Gou posando para foto"
+          alt={t("CokeStudio:PeggyGouPosingForAPhoto")}
         />
         <ComponentDefaultNoTitle
           flexDirection="flex-row xl:mt-[.5rem]"
-          title="Deixe sua tela no estilo com o papel de parede da Karol G"
-          span="Um presente que todo fã de verdade da Karol G vai querer ter."
+          title={t("CokeStudio:StyleYourScreenWithKarolG")}
+          span={t("CokeStudio:AGiftThatEveryTrueKarolG")}
           urlButton={WallpaperKarolGCokeStudio2024}
-          textButton="Eu quero"
+          textButton={t("CokeStudio:IWant")}
           urlImage={KarolGWallpaperGeneric}
-          alt="Karol G posando para foto"
+          alt={t("CokeStudio:KarolGPosing")}
         />
         <ComponentDefaultNoTitle
           flexDirection="flex-row-reverse xl:mt-[.5rem]"
-          title="Foto Autografada com NewJeans no Coke Studio"
-          span="Baixe já sua foto do NewJeans no Coke Studio, assinado pelo grupo."
+          title={t("CokeStudio:AutographedPhotoNewJeans")}
+          span={t("CokeStudio:DownloadYourNewJeansPhoto")}
           urlButton={NewjeansAutograph}
-          textButton="Eu quero"
+          textButton={t("CokeStudio:IWant")}
           urlImage={NewJeansAutographGeneric}
-          alt="NewJeans posando para foto"
+          alt={t("CokeStudio:NewJeansPosingForAPhoto")}
         />
       </div>
       <div className="flex flex-col gap-5 justify-center items-center mt-2 xl:mt-5">
         <h3 className="font-Noto font-bold text-[1.8rem] xl:text-[2rem] text-black">
-          Experiências
+          {t("CokeStudio:Experiences")}
         </h3>
         <div className="flex flex-col gap-10 p-5 items-center mb-10 max-w-screen nv:max-w-[70rem] lg:flex-row justify-center lg:gap-10">
           {cardsContent.map((card, index) => {
@@ -183,11 +183,11 @@ export default function CokeStudio() {
       </div>
       <SectionFloatContent
         havePreTitle={true}
-        preTitle="Momentos mágicos de verdade"
+        preTitle={t("CokeStudio:TrulyMagicalMoments")}
         urlImage={MagicMomentsPeggyGou}
-        alt="Peggy Gou DJ em uma performance ao vivo no Coca-Cola Studio, com uma iluminação vibrante em vermelho e o logo ao fundo. Ela está vestindo um vestido vermelho e possui tatuagens visíveis nos braços. No horizonte, há indivíduos e um clima de celebração e sons musicais."
-        title="Peggy Gou nas picapes"
-        span="A nossa DJ superstar vai dar um giro pela sua vida nessa sessão de perguntas e respostas com seus fãs, mais um momento exclusivo que você só encontra no Coke Studio."
+        alt={t("CokeStudio:PeggyGouDJ")}
+        title={t("CokeStudio:PeggyGouInThePickuptrucks")}
+        span={t("CokeStudio:OurSuperstarDJ")}
         extraClassSection="flex-col xl:flex-row"
         extraClassDiv="-top-10 xl:top-0! xl:-ml-10"
       />

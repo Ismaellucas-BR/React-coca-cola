@@ -1,3 +1,5 @@
+import { useTranslation } from "react-i18next";
+
 import FifthSection from "./components/ComponentDefaultNoTitle";
 import FirstSection from "./pages/Home/components/FirstSection";
 import SectionFloatContent from "./components/SectionFloatContent";
@@ -10,42 +12,39 @@ import LatamSustainability from "./assets/LatamSustainability.webp";
 import CardHomepageLoja from "./assets/CardHomepageLoja.webp";
 
 function App() {
+  const { t } = useTranslation(["common", "home"]);
   return (
     <main className="flex flex-col items-center gap-5">
       <FirstSection />
       <div className="flex flex-col items-center gap-5 xl:max-w-[70rem]">
         <SecondSection
-          titleMain="O que há de novo?"
-          titleSecondary="Sprite Lemon Fresh deixa tudo bem mais leve"
-          span="Descubra a leveza."
+          titleMain={t("home:WhatsNew")}
+          titleSecondary={t("home:SpriteLemonFresh")}
+          span={t("home:DiscoverLightness")}
           urlButton="/brands/sprite"
-          textButton="Saiba mais"
+          textButton={t("home:LearnMore")}
           urlImg={SpriteLemon}
-          alt="banner promocional da sprite"
+          alt={t("home:SpritePromotionalBanner")}
           flexDirection="flex xl:flex-row"
         />
         <ThirdSection />
         <SectionFloatContent
           havePreTitle={false}
           urlImage={LatamSustainability}
-          alt="Rio com mato e montanhas ao fundo"
-          title="Sustentabilidade"
-          span="A longevidade da Coca‑Cola Brasil só é possível se a
-              nossa forma de trabalhar trouxer ganhos para a sociedade e o
-              planeta. É imprescindível crescer de forma consciente e
-              sustentável"
+          alt={t("home:RiverWithVegetation")}
+          title={t("home:Sustainability")}
+          span={t("home:TheLongevityOfCocaCola")}
           urlButton="/sustainability"
-          textButton="Entenda melhor"
+          textButton={t("common:UnderstandBetter")}
           extraClassSection="flex-col-reverse xl:flex-row w-[90%]"
           extraClassDiv="-bottom-10 xl:-bottom-10! xl:-ml-10"
         />
         <FifthSection
           flexDirection="flex  xl:flex-row w-[90%]! xl:max-w-[70rem]!"
-          title="Encontre Seu Estilo na Loja Coca‑Cola"
-          span="Descubra o merchandising oficial na Loja Coca‑Cola. Uma coleção única
-          para você celebrar a sua conexão com a felicidade!"
+          title={t("home:FindYourStyle")}
+          span={t("home:DiscoverTheOfficial")}
           urlImage={CardHomepageLoja}
-          alt="homem andando de skate"
+          alt={t("home:ManRidingSkateboard")}
         />
         <SixthSection />
       </div>

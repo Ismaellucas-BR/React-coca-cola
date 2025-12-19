@@ -1,12 +1,12 @@
+import { useTranslation } from "react-i18next";
+
 export default function FifthSection() {
+  const { t } = useTranslation("ShareACoke");
   return (
     <section className="flex flex-col gap-5 px-5 lg:max-w-[70rem] lg:w-full">
       <div className="flex flex-col gap-3 text-center">
-        <h2 className="title-section">A fantasia chegou!</h2>
-        <span className="content-section">
-          Assista ao clipe completo de FANTASÍA com Pabllo Vittar e Nathy Peluso
-          ❤️‍🔥❤️‍🔥❤️‍🔥
-        </span>
+        <h2 className="title-section">{t("TheFantasyHasArrived")}</h2>
+        <span className="content-section">{t("WatchTheFullMusic")}</span>
       </div>
       <iframe
         width="100%"
