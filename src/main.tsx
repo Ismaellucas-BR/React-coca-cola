@@ -22,6 +22,7 @@ import AtHome from "./pages/sprite/AtHome";
 import InTheStreet from "./pages/sprite/InTheStreet";
 import { LanguageProvider } from "./components/translation/LanguageContext";
 import "./i18n";
+import Teste from "./pages/teste";
 
 const root: HTMLElement | null = document.getElementById("root");
 
@@ -53,6 +54,7 @@ ReactDOM.createRoot(root!).render(
           <Route path="brands/sprite/sprite-e-verao" element={<Summer />} />
           <Route path="brands/sprite/athome" element={<AtHome />} />
           <Route path="brands/sprite/inthestreet" element={<InTheStreet />} />
+          <Route path="teste" element={<Teste />} />
         </Route>
       </Routes>
     </BrowserRouter>

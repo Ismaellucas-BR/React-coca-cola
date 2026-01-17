@@ -1,6 +1,9 @@
 import FloatBar from "@/components/FloatBar";
 import MegaBanner from "@/components/MegaBanner";
+
 import { Link } from "react-router";
+import { useTranslation } from "react-i18next";
+
 import HeroCokeStudio2024FriendsWithSunGlassesAndColaDesktop from "../../../assets/ShareACoke/team/HeroCokeStudio2024FriendsWithSunGlassesAndColaDesktop.webp";
 import HeroCokeStudio2024FriendsWithSunGlassesAndColaMobile from "../../../assets/ShareACoke/team/HeroCokeStudio2024FriendsWithSunGlassesAndColaMobile.webp";
 import CokeStudio2024Newjeans from "../../../assets/CokeStudio/CokeStudio2024Newjeans.webp";
@@ -8,7 +11,9 @@ import CokeStudio2024KarolG from "../../../assets/CokeStudio/CokeStudio2024Karol
 import CokeStudio2024PeggyGou from "../../../assets/CokeStudio/CokeStudio2024PeggyGou.webp";
 import CokeStudio24RockInRio from "../../../assets/CokeStudio/CokeStudio24RockInRio.webp";
 import CokeStudio24Lolla25 from "../../../assets/CokeStudio/CokeStudio24Lolla25.webp";
+
 export default function Team() {
+  const { t } = useTranslation(["common", "Team"]);
   return (
     <div className="flex flex-col items-center pt-30 lg:pt-20">
       <FloatBar />
@@ -17,12 +22,12 @@ export default function Team() {
           <Link
             to="coke-studio"
             className="font-Noto font-normal text-[rgb(108, 108, 108)]">
-            <span>Coke Studio/</span>
+            <span>{t("common:Coke")}/</span>
           </Link>
           <Link
             to="coke-studio/experiences"
             className="font-Noto font-semibold text-black">
-            <span>Time</span>
+            <span>{t("Team:Team")}</span>
           </Link>
         </span>
       </div>
@@ -31,23 +36,19 @@ export default function Team() {
           urlImage={HeroCokeStudio2024FriendsWithSunGlassesAndColaDesktop}
           urlImageMobile={HeroCokeStudio2024FriendsWithSunGlassesAndColaMobile}
           span="COKE STUDIO 2025"
-          title="Nosso time de 2025"
+          title={t("Team:Our2025Team")}
         />
         <div className="flex flex-col items-center text-center gap-3 md:max-w-[65%] lg:max-w-[45%]">
-          <h2 className="title-section">O Time do Coke Studio</h2>
-          <span>
-            Continue com a gente para mais anúncios e atualizações dos
-            lançamentos, experiências e muito mais nessa temporada de 2025 do
-            Coke Studio.
-          </span>
+          <h2 className="title-section">{t("Team:TheCokeStudioTeam")}</h2>
+          <span>{t("Team:StayTunedForMore")}</span>
         </div>
         <section className="flex flex-col items-center text-center gap-5 max-w-screen lg:max-w-[46rem]">
-          <h2 className="title-section">Time completo</h2>
+          <h2 className="title-section">{t("Team:FullTeam")}</h2>
           <div className="flex flex-wrap gap-7 justify-center items-center mt-3  pb-20">
             <div className="flex flex-wrap flex-col items-center justify-center gap-3  w-[40%] md:w-[45%]  lg:w-[30%]">
               <img
                 src={CokeStudio2024Newjeans}
-                alt="NewJeans vestindo roupas casuais e estilosas, incluindo moletons, jaquetas esportivas e bandanas. Eles estão sorrindo e posando juntos em frente a um fundo branco, transmitindo um espírito jovem e descontraído."
+                alt={t("Team:NewJeansAreWearing")}
                 className="rounded-xl shadow-2xl"
               />
               <h3 className="font-Noto font-semibold  underline">NewJeans</h3>
@@ -71,7 +72,7 @@ export default function Team() {
             <div className=" flex flex-col items-center justify-center gap-3 w-[40%] md:w-[45%] lg:w-[30%]">
               <img
                 src={CokeStudio24RockInRio}
-                alt="Pessoa com óculos futuristas e uma garrafa de Coca-Cola em um ambiente de festa."
+                alt={t("Team:APersonWearingFuturistic")}
                 className="rounded-xl shadow-2xl"
               />
               <h3 className="font-Noto font-semibold  underline">
@@ -81,7 +82,7 @@ export default function Team() {
             <div className=" flex flex-col items-center justify-center gap-3 w-[40%] md:w-[45%] lg:w-[30%]">
               <img
                 src={CokeStudio24Lolla25}
-                alt="Imagem promocional com o texto 'Promoção Você VIP no Lolla Brasil', acompanhado dos logotipos da Coca-Cola e do Lollapalooza Brasil. O fundo é preto com linhas vermelhas onduladas, criando um efeito dinâmico."
+                alt={t("Team:PromotionalImageWith")}
                 className="rounded-xl shadow-2xl"
               />
               <h3 className="font-Noto font-semibold  underline">

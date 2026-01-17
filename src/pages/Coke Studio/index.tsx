@@ -73,10 +73,10 @@ export default function CokeStudio() {
           <a
             href="/"
             className="font-Noto font-normal text-[rgb(108, 108, 108)]">
-            Coca‑Cola/
+            {t("common:Coke")}/
           </a>
           <a href="#" className="font-Noto font-semibold text-black">
-            <span>Coke Studio</span>
+            <span>Coke-Studio</span>
           </a>
         </span>
       </div>

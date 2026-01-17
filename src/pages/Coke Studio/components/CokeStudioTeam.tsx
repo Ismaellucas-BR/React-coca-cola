@@ -3,14 +3,15 @@ import CokeStudio2024KarolG from "../../../assets/CokeStudio/CokeStudio2024Karol
 import CokeStudio2024PeggyGou from "../../../assets/CokeStudio/CokeStudio2024PeggyGou.webp";
 import CokeStudio24RockInRio from "../../../assets/CokeStudio/CokeStudio24RockInRio.webp";
 import CokeStudio24Lolla25 from "../../../assets/CokeStudio/CokeStudio24Lolla25.webp";
+
+import { useTranslation } from "react-i18next";
+
 export default function CokeStudioTeam() {
+  const { t } = useTranslation("CokeStudioTeam");
   return (
     <section className="flex flex-col items-center text-center gap-5 max-w-screen lg:max-w-[46rem]">
-      <h2 className="title-section">Nosso time Coke Studio</h2>
-      <span className="content-section md:px-20">
-        Continue com a gente para mais anúncios e atualizações dos lançamentos,
-        experiências e muito mais nessa temporada de 2024 do Coke Studio.
-      </span>
+      <h2 className="title-section"> {t("OurCokeStudioTeam")}</h2>
+      <span className="content-section md:px-20">{t("StayTunedForMore")}</span>
       <div className="flex flex-wrap gap-7 justify-center items-center mt-3  pb-20">
         <div className="flex flex-wrap flex-col items-center justify-center gap-3  w-[40%] md:w-[45%]  lg:w-[30%]">
           <img

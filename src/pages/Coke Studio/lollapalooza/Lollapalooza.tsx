@@ -2,8 +2,10 @@ import { EmblaOptionsType } from "embla-carousel";
 import { Link } from "react-router";
 import { MouseEventHandler, useState } from "react";
 import { Play } from "lucide-react";
-import useEmblaCarousel from "embla-carousel-react";
+import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
+
+import useEmblaCarousel from "embla-carousel-react";
 import FloatBar from "@/components/FloatBar";
 import EmblaCarousel from "../../Home/components/carrossel/EmblaCarousel";
 import FormSections from "@/pages/shareACoke/components/FormSections";
@@ -12,6 +14,7 @@ import Lolla2025Hero1Mobile from "../../../assets/ShareACoke/lolla/Lolla2025Hero
 import Lolla25JaoBannerDesktop from "../../../assets/ShareACoke/lolla/Lolla25JaoBannerDesktop.webp";
 import Lolla25JaoBannerMobile from "../../../assets/ShareACoke/lolla/Lolla25JaoBannerMobile.webp";
 import GanadorContentCard from "../../../assets/ShareACoke/lolla/GanadorContentCard.webp";
+
 // @ts-ignore
 const OPTIONS: EmblaOptionsType = { loop: true };
 // @ts-ignore
@@ -20,6 +23,7 @@ const SLIDE_COUNT = 5;
 const SLIDES: any = [];
 
 export default function lollapalooza() {
+  const { t } = useTranslation(["common", "Lolla"]);
   useEffect(() => {
     const script = document.createElement("script");
     script.setAttribute("src", "https://www.instagram.com/embed.js");
@@ -46,12 +50,7 @@ export default function lollapalooza() {
           <Link
             to="/"
             className="font-Noto font-normal text-[rgb(108, 108, 108)]">
-            Coca‑Cola/
-          </Link>
-          <Link
-            to="/"
-            className="font-Noto font-normal text-[rgb(108, 108, 108)]">
-            Time/
+            {t("common:Coke")}/
           </Link>
           <Link to="#" className="font-Noto font-semibold text-black">
             <span>Lollapalooza BR</span>
@@ -64,8 +63,8 @@ export default function lollapalooza() {
           {
             bgDesktop: Lolla2025Hero1,
             bgMobile: Lolla2025Hero1Mobile,
-            title: "Lollapalooza Brasil: Reviva a Magia!",
-            text: "A energia do festival ao seu alcance. Relembre os melhores momentos do LollaBR!",
+            title: t("Lolla:ReliveTheMagic"),
+            text: t("Lolla:TheFestivalEnergy"),
             buttonText: "",
             buttonLink: "",
           },
@@ -73,15 +72,13 @@ export default function lollapalooza() {
             bgDesktop: Lolla25JaoBannerDesktop,
             bgMobile: Lolla25JaoBannerMobile,
             title: "Pov: Jão",
-            text: "Viva a jornada criativa de Jão em nossa série exclusiva e descubra a inspiração por trás do seu som único.",
-            buttonText: "Saiba mais",
-            buttonLink: "#",
+            text: t("Lolla:ExperienceJaos"),
           },
           {
             bgDesktop: Lolla2025Hero1,
             bgMobile: Lolla2025Hero1Mobile,
-            title: "Lollapalooza Brasil: Reviva a Magia!",
-            text: "A energia do festival ao seu alcance. Relembre os melhores momentos do LollaBR!",
+            title: t("Lolla:ReliveTheMagic"),
+            text: t("Lolla:TheFestivalEnergy"),
             buttonText: "",
             buttonLink: "",
           },
@@ -90,14 +87,12 @@ export default function lollapalooza() {
             bgDesktop: Lolla25JaoBannerDesktop,
             bgMobile: Lolla25JaoBannerMobile,
             title: "Pov: Jão",
-            text: "Viva a jornada criativa de Jão em nossa série exclusiva e descubra a inspiração por trás do seu som único.",
-            buttonText: "Saiba mais",
-            buttonLink: "#",
+            text: t("Lolla:ExperienceJaos"),
           },
         ]}
       />
       <div className="flex flex-col items-center gap-5 xl:gap-10 mt-5 xl:mt-10">
-        <h2 className="title-section">Parabéns!</h2>
+        <h2 className="title-section">{t("Lolla:Congratulations")}</h2>
         <div className="flex flex-col shadow-md rounded-lg w-full lg:w-[22rem] max-w-[90%]">
           <img
             src={GanadorContentCard}
@@ -119,16 +114,14 @@ export default function lollapalooza() {
           </div>
         </div>
         <FormSections
-          title="Prepare-se para momentos inesquecíveis"
-          span1="Fique de olho para saber dos próximos festivais, novidades, experiências e muito mais com Coke Studio. Assine a newsletter para ter acesso."
+          title={t("Lolla:GetReadyForUnforgettable")}
+          span1={t("Lolla:StayTuned")}
           extraClasse="mt-10"
         />
         <section className="flex flex-col items-center text-center gap-5">
-          <h2 className="title-section">Playlist oficial</h2>
+          <h2 className="title-section">{t("Lolla:OfficialPlaylist")}</h2>
           <span className="content-section text-lg! px-10">
-            Entre no clima do Lollapalooza Brasil 2025!Curta a playlist oficial
-            no Spotify e sinta a vibração do festival antes mesmo de ele
-            começar.
+            {t("Lolla:GetInTheMood")}
           </span>
           <div className="w-[90%]">
             <iframe
@@ -143,9 +136,7 @@ export default function lollapalooza() {
           </div>
         </section>
         <section className="flex flex-col items-center justify-center text-center gap-5 w-[90%]">
-          <h2 className="title-section">
-            Relembre como foi o Lollapalooza 2024
-          </h2>
+          <h2 className="title-section">{t("Lolla:ReliveWhatLollapalooza")}</h2>
           {isPlaying ? (
             <iframe
               className="w-full  rounded-lg h-[13.25rem]"

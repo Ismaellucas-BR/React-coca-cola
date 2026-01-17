@@ -4,12 +4,15 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { useTranslation } from "react-i18next";
+
 import SustainabilityBannerDesktop from "../../assets/sustainability/SustainabilityBannerDesktop.webp";
 import SustainabilityBannerMobile from "../../assets/sustainability/SustainabilityBannerMobile.webp";
 import BannerAgua from "../../assets/sustainability/BannerAgua.webp";
 import Empaques from "../../assets/sustainability/Empaques.webp";
 import PortafolioDeProductos from "../../assets/sustainability/PortafolioDeProductos.webp";
 export default function Sustainability() {
+  const { t } = useTranslation("Sustainability");
   return (
     <div className="flex flex-col gap-8 pb-10 w-full justify-center items-center">
       <div className="flex w-full justify-center">
@@ -23,13 +26,10 @@ export default function Sustainability() {
       <section className=" flex flex-col justify-center items-center gap-8 max-w-[90%] xl:max-w-[70rem] xl:pt-5">
         <div className="flex flex-col justify-center items-center text-center gap-3 xl:gap-5">
           <h1 className="title-section xl:text-[2.375rem]!">
-            SUSTENTABILIDADE
+            {t("Sustainability")}
           </h1>
           <span className="content-section xl:max-w-[60rem]">
-            Como uma companhia total de bebidas, somos guiados pelo nosso
-            propósito de refrescar o mundo e fazer a diferença. Nosso objetivo é
-            expandir nosso negócio de maneira que impulsione mudanças positivas
-            e contribua para um futuro mais sustentável para o nosso planeta.
+            {t("BeverageCompany")}
           </span>
         </div>
         <div className="flex flex-col gap-5 xl:flex-row xl:gap-10">
@@ -42,44 +42,18 @@ export default function Sustainability() {
             <Accordion type="single" collapsible>
               <AccordionItem value="design">
                 <AccordionTrigger className="font-Noto font-bold text-2xl border-b-2 border-[rgb(213, 213, 213)] rounded-none [&>svg]:size-8 [&>svg]:text-black">
-                  Design
+                  {t("PrioritizingWaterReplenishment")}
                 </AccordionTrigger>
-                <AccordionContent className="content-section py-5">
-                  Aspiramos utilizar entre 35% e 40% de material reciclado* em
-                  nossas embalagens primárias (plástico, vidro e alumínio),
-                  incluindo aumentar globalmente o uso de plástico reciclado
-                  para 30% ou 35% até 2035.
+                <AccordionContent className="content-section py-5 whitespace-pre-line">
+                  {t("Since2015")}
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="coletar">
                 <AccordionTrigger className="font-Noto font-bold text-2xl border-b-2 border-[rgb(213, 213, 213)] rounded-none [&>svg]:size-8 [&>svg]:text-black">
-                  Colaborar para colectar​
+                  {t("AdoptingALocal")}
                 </AccordionTrigger>
-                <AccordionContent className="content-section py-5">
-                  Ajudar a garantir a coleta de 70% a 75% do equivalente ao
-                  número de garrafas e latas introduzidas no mercado anualmente
-                  até 2035.
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="embalagens">
-                <AccordionTrigger className="font-Noto font-bold text-2xl border-b-2 border-[rgb(213, 213, 213)] rounded-none [&>svg]:size-8 [&>svg]:text-black">
-                  Objetivo para embalagens
-                </AccordionTrigger>
-                <AccordionContent className="content-section py-5">
-                  Nosso objetivo é utilizar entre 35% e 40% de material
-                  reciclado* em nossas embalagens primárias (plástico, vidro e
-                  alumínio), incluindo aumentar o uso de plástico reciclado
-                  globalmente para 30% ou 35% até 2035.
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="objetivo">
-                <AccordionTrigger className="font-Noto font-bold text-2xl border-b-2 border-[rgb(213, 213, 213)] rounded-none [&>svg]:size-8 [&>svg]:text-black">
-                  Objetivo de coleta​
-                </AccordionTrigger>
-                <AccordionContent className="content-section py-5">
-                  Nosso objetivo é ajudar a garantir a coleta de 70% a 75% do
-                  equivalente ao número de garrafas e latas introduzidas no
-                  mercado anualmente até 2035.
+                <AccordionContent className="content-section py-5 whitespace-pre-line">
+                  {t("WeHaveOperations")}
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
@@ -95,42 +69,32 @@ export default function Sustainability() {
                 <AccordionTrigger className="font-Noto font-bold text-2xl border-b-2 border-[rgb(213, 213, 213)] rounded-none [&>svg]:size-8 [&>svg]:text-black">
                   Design
                 </AccordionTrigger>
-                <AccordionContent className="content-section py-5">
-                  Aspiramos utilizar entre 35% e 40% de material reciclado* em
-                  nossas embalagens primárias (plástico, vidro e alumínio),
-                  incluindo aumentar globalmente o uso de plástico reciclado
-                  para 30% ou 35% até 2035.
+                <AccordionContent className="content-section py-5 whitespace-pre-line">
+                  {t("WeAimToUse")}
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="coletar">
                 <AccordionTrigger className="font-Noto font-bold text-2xl border-b-2 border-[rgb(213, 213, 213)] rounded-none [&>svg]:size-8 [&>svg]:text-black">
-                  Colaborar para colectar​
+                  {t("CollaborateToCollect")}
                 </AccordionTrigger>
                 <AccordionContent className="content-section py-5">
-                  Ajudar a garantir a coleta de 70% a 75% do equivalente ao
-                  número de garrafas e latas introduzidas no mercado anualmente
-                  até 2035.
+                  {t("ToHelpEnsure")}
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="embalagens">
                 <AccordionTrigger className="font-Noto font-bold text-2xl border-b-2 border-[rgb(213, 213, 213)] rounded-none [&>svg]:size-8 [&>svg]:text-black">
-                  Objetivo para embalagens
+                  {t("ObjectiveForPackaging")}
                 </AccordionTrigger>
-                <AccordionContent className="content-section py-5">
-                  Nosso objetivo é utilizar entre 35% e 40% de material
-                  reciclado* em nossas embalagens primárias (plástico, vidro e
-                  alumínio), incluindo aumentar o uso de plástico reciclado
-                  globalmente para 30% ou 35% até 2035.
+                <AccordionContent className="content-section py-5 whitespace-pre-line">
+                  {t("OurGoalIs")}
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="objetivo">
                 <AccordionTrigger className="font-Noto font-bold text-2xl border-b-2 border-[rgb(213, 213, 213)] rounded-none [&>svg]:size-8 [&>svg]:text-black">
-                  Objetivo de coleta​
+                  {t("CollectionObjective​")}
                 </AccordionTrigger>
                 <AccordionContent className="content-section py-5">
-                  Nosso objetivo é ajudar a garantir a coleta de 70% a 75% do
-                  equivalente ao número de garrafas e latas introduzidas no
-                  mercado anualmente até 2035.
+                  {t("OurGoalIsToHelp")}
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
@@ -144,22 +108,18 @@ export default function Sustainability() {
             <Accordion type="single" collapsible>
               <AccordionItem value="design">
                 <AccordionTrigger className="font-Noto font-bold text-2xl border-b-2 border-[rgb(213, 213, 213)] rounded-none [&>svg]:size-8 [&>svg]:text-black">
-                  Reduzindo emissões
+                  {t("ReducingEmissions")}
                 </AccordionTrigger>
-                <AccordionContent className="content-section py-5">
-                  Estabelecemos uma meta para reduzir nossas emissões de Alcance
-                  1, 2 e 3 em linha com uma trajetória de 1.5°C para o ano de
-                  2035, partindo de uma linha de base de 2019*.
+                <AccordionContent className="content-section py-5 whitespace-pre-line">
+                  {t("WeHaveSetATarget")}
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="coletar">
                 <AccordionTrigger className="font-Noto font-bold text-2xl border-b-2 border-[rgb(213, 213, 213)] rounded-none [&>svg]:size-8 [&>svg]:text-black">
-                  Objetivo
+                  {t("Objective")}
                 </AccordionTrigger>
-                <AccordionContent className="content-section py-5">
-                  Nosso objetivo é reduzir nossas emissões de Alcance 1, 2 e 3
-                  em linha com uma trajetória de 1.5°C para o ano de 2035,
-                  partindo de uma linha de base de 2019**.
+                <AccordionContent className="content-section py-5 whitespace-pre-line">
+                  {t("OurGoalIsToReduce")}
                 </AccordionContent>
               </AccordionItem>
             </Accordion>

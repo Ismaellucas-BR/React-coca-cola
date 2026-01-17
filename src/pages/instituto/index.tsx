@@ -8,7 +8,11 @@ import InstitutoCocaColaBrasilRelatoriDeResultados2024 from "../../assets/instit
 import PaginaInicialColetivoOnlineRevMarcelly from "../../assets/instituto/PaginaInicialColetivoOnlineRevMarcelly.webp";
 import PaginaInicialColetivoJovemRevMarcelly from "../../assets/instituto/PaginaInicialColetivoJovemRevMarcelly.webp";
 import PaginaInicialRumoAosMilhoes from "../../assets/instituto/PaginaInicialRumoAosMilhoes.webp";
+
+import { useTranslation } from "react-i18next";
+
 export default function Instituto() {
+  const { t } = useTranslation(["common", "Institute"]);
   return (
     <div className="flex flex-col gap-2 items-center  w-full">
       <div
@@ -18,59 +22,47 @@ export default function Instituto() {
         }}>
         <div className="absolute inset-0 bg-black/50 z-0" />
         <h1 className="title-section text-white! text-[1.5rem]! z-10">
-          De milhares para milhões
+          {t("Institute:FromThousandsToMillions")}
         </h1>
       </div>
       <section className="flex flex-col justify-center items-center xl:max-w-[70rem]">
         <div className="flex flex-col gap-15 py-10 max-w-[90%] justify-center items-center">
           <span className="content-section">
             {" "}
-            Somos o Instituto Coca‑Cola Brasil, mas pode nos chamar de ICCB.
-            Também somos uma Organização da Sociedade Civil de Interesse Público
-            (OSCIP) que atua como agente de transformação social para reduzir as
-            desigualdades e contribuir para o desenvolvimento socioeconômico do
-            país, potencializado por parcerias e pelo Sistema Coca‑Cola.
-            Acreditamos que o único caminho para quebrar ciclos de pobreza é por
-            meio do fomento à diversidade, equidade e inclusão e, por isso,
-            atuamos promovendo empregabilidade e empoderamento econômico de
-            jovens.{" "}
+            {t("Institute:WeAreTheInstitute")}{" "}
           </span>
           <img src={InfograficoDados} alt="" />
         </div>
         <div className="flex flex-col gap-16 justify-center items-center md:gap-5">
           <SectionFloatContent
-            title="Confira nossos resultados"
-            span="Está disponível o Relatório Institucional de 2024 do Instituto Coca‑Cola Brasil (ICCB). Nele, você encontra nossos resultados e iniciativas para empoderar economicamente 5 milhões de pessoas até 2030, além de muitas histórias e curiosidades sobre nossa atuação. Vamos juntos?"
+            title={t("Institute:CheckOutOurResults")}
+            span={t("Institute:The2024InstitutionalReport")}
             urlImage={RelatorioInstitucional2024}
             alt=""
             openInNewTab
-            textButton="Baixe aqui"
+            textButton={t("common:DownloadHere")}
             urlButton={InstitutoCocaColaBrasilRelatoriDeResultados2024}
             extraClassSection="flex flex-col justify-center items-center xl:flex-row! xl:mt-10! xl:pb-0"
             extraClassDiv="-top-10 xl:top-0 xl:-left-10 max-w-[90%] xl:mt-0"
           />
           <ComponentDefaultPlusTitle
-            titleMain="Nossas iniciativas "
-            titleSecondary="
-        Coletivo Online
-    "
-            span="Maior programa de empregabilidade do ICCB que impulsiona e prepara jovens acima de 16 anos e de todo Brasil para o mercado de trabalho e os conecta a oportunidades de trabalho nas nossas empresas parceiras. Tudo para estar lado a lado de jovens que sonham em conquistar o primeiro emprego. É online, de curta duração, gratuito e feito para você."
+            titleMain={t("Institute:OurInitiatives")}
+            titleSecondary={t("Institute:OnlineCollective")}
+            span={t("Institute:LargestEmployabilityProgram")}
             urlImg={PaginaInicialColetivoOnlineRevMarcelly}
             alt=""
             flexDirection="flex xl:flex-row"
           />
           <ComponentDefaultNoTitle
-            title="
-        Plataforma Coletivo Jovem
-    "
-            span="Plataforma que reúne diversas iniciativas de capacitação profissional e conexão com oportunidades de trabalho nas empresas parceiras."
+            title={t("Institute:YouthCollectivePlatform")}
+            span={t("Institute:APlatformThatBrings")}
             urlImage={PaginaInicialColetivoJovemRevMarcelly}
             alt=""
             flexDirection="flex xl:flex-row"
           />
           <SectionFloatContent
-            title="Rumo aos milhões"
-            span="Reconhecidos por nossa inovação social e capacidade de escala, queremos contribuir para o empoderamento econômico de 5 milhões de pessoas até 2030. Nos propomos a criar oportunidades no mundo do trabalho para jovens, prioritariamente negros e mulheres em situação de vulnerabilidade socioeconômica, que serão potencializadas por parcerias, pelo Sistema Coca Cola e pela sua participação."
+            title={t("Institute:TowardsTheMillions")}
+            span={t("Institute:RecognizedForOurSocial")}
             urlImage={PaginaInicialRumoAosMilhoes}
             alt=""
             extraClassSection="flex flex-col justify-center items-center xl:flex-row"
