@@ -65,9 +65,7 @@ export default function CokeStudio() {
   ];
   return (
     <div className="relative flex flex-col items-center pt-30 lg:pt-10">
-      <div className="sticky top-24 z-40 flex justify-center w-full mb-5">
-        <FloatBar />
-      </div>
+      <FloatBar />
       <div className="flex items-start justify-start w-full  mb-5  max-w-[90%] lg:mb-10 nv:max-w-[70rem]">
         <span>
           <a
@@ -125,7 +123,7 @@ export default function CokeStudio() {
           },
         ]}
       />
-      <div className="lg:max-w-[46rem] ">
+      <div className="lg:max-w-[46rem] mt-5">
         <FormSections
           title={t("CokeStudio:GetReadyForUnforgettable")}
           span1={t("CokeStudio:StayTunedForUpcoming")}

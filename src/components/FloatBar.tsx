@@ -12,17 +12,17 @@ export default function FloatBar() {
   ];
 
   return (
-    <div className="max-w-[90%]">
-      <ul className="flex gap-5 rounded-lg p-5 bg-black/56 text-white font-Noto font-semibold overflow-x-auto scrollbar-hide">
+    <div className="fixed  z-50 max-w-[90%] top-40 lg:mt-5 lg:mb-20 lg:top-24 lg:sticky">
+      <ul className="flex gap-5 rounded-lg p-5 bg-black/56 text-white font-Noto font-semibold overflow-scroll scrollbar-hide">
         {links.map((link) => (
-          <li key={link.href}>
+          <li key={link.href} className="flex w-full">
             <Link
               to={link.href}
-              className={`${
+              className={`transition ${
                 location.pathname === link.href
-                  ? "underline underline-offset-[130%] decoration-3"
-                  : "hover:underline"
-              } transition whitespace-nowrap`}>
+                  ? "underline underline-offset-[130%] decoration-3 transition whitespace-nowrap"
+                  : "hover:underline whitespace-nowrap"
+              }`}>
               {link.label}
             </Link>
           </li>

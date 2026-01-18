@@ -11,7 +11,7 @@ export default function FloatBar() {
   ];
 
   return (
-    <div className="sticky top-20 z-50 max-w-[90%] lg:w-1/2">
+    <div className="sticky top-20 z-50 max-w-[90%]">
       <ul className="flex gap-5 rounded-lg p-5 bg-black/56 text-white font-Noto font-semibold overflow-x-auto scrollbar-hide">
         {links.map((link) => (
           <li key={link.href}>
