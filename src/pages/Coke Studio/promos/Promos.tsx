@@ -57,6 +57,7 @@ export default function Promos() {
           textButton={t("common:IWant")}
           urlImage={PeggyGouWallpaperGeneric}
           alt={t("Promos:PeggyGouPosing")}
+          openInNewTab
         />
         <ComponentDefaultNoTitle
           flexDirection="flex-row xl:mt-[3.5rem]"
@@ -66,6 +67,7 @@ export default function Promos() {
           textButton={t("common:IWant")}
           urlImage={PeggyGouWallpaperGeneric}
           alt={t("Promos:PeggyHoldingACoke")}
+          openInNewTab
         />
         <ComponentDefaultNoTitle
           flexDirection="xl:flex xl:flex-row-reverse xl:mt-[3.5rem]"
@@ -75,6 +77,7 @@ export default function Promos() {
           textButton={t("common:IWant")}
           urlImage={KarolGWallpaperGeneric}
           alt={t("Promos:KarolGPosing")}
+          openInNewTab
         />
         <ComponentDefaultNoTitle
           flexDirection="flex-row xl:mt-[3.5rem]"
@@ -84,6 +87,7 @@ export default function Promos() {
           textButton={t("common:IWant")}
           urlImage={NewJeansAutographGeneric}
           alt={t("Promos:NewJeansPosingForAPhoto")}
+          openInNewTab
         />
         <FormSections
           title={t("Promos:GetReadyForUnforgettable")}

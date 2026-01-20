@@ -1,13 +1,16 @@
 import { Terminal } from "@phosphor-icons/react";
 import { Alert, AlertDescription, AlertTitle } from "../components/ui/alert";
+import { useTranslation } from "react-i18next";
 function AlertHome() {
+  const { t } = useTranslation("common");
   return (
-    <Alert>
+    <Alert className="max-w-[90rem]!">
       <Terminal size={32} />
-      <AlertTitle className="font-UberMoveBold text-lg">Atenção</AlertTitle>
+      <AlertTitle className="font-UberMoveBold text-lg">
+        {t("Attention")}
+      </AlertTitle>
       <AlertDescription className="font-UberMoveNormal text-sm sm:text-base">
-        Este site tem caráter estudantil. Nenhuma informação aqui deve ser
-        interpretada ou utilizada com fins comerciais.
+        {t("ThisSiteIs")}
       </AlertDescription>
     </Alert>
   );

@@ -1,15 +1,10 @@
 import EmblaCarousel from "./carrossel/EmblaCarousel";
-import { EmblaOptionsType } from "embla-carousel";
 import { useTranslation } from "react-i18next";
 
 import HeroDesktop from "../../../assets/HeroDesktop.webp";
 import HeroMobile from "../../../assets/HeroMobile.webp";
 import HeroBannerDesktop from "../../../assets/HeroBannerDesktop.webp";
 import HeroNuevo from "../../../assets/HeroNuevo.webp";
-
-const OPTIONS: EmblaOptionsType = { loop: true };
-const SLIDE_COUNT = 5;
-const SLIDES: any = [];
 
 export default function FirstSection() {
   const { t } = useTranslation(["home", "common"]);

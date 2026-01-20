@@ -34,9 +34,9 @@ const EmblaCarousel: React.FC<PropType> = ({ slides, options }) => {
   };
 
   return (
-    <section className="embla w-full max-w-screen overflow-hidden mx-auto">
-      <div className="embla__viewport" ref={emblaRef}>
-        <div className="embla__container flex">
+    <section className="embla w-full max-w-[90rem]! overflow-hidden mx-auto ">
+      <div className="embla__viewport max-w-[90rem]!" ref={emblaRef}>
+        <div className="embla__container flex max-w-[90rem]!">
           {slides.map((slide, index) => (
             <div className="embla__slide" key={index}>
               {slide.videoUrl ? (

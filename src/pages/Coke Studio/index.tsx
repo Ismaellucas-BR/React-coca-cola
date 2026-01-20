@@ -87,39 +87,31 @@ export default function CokeStudio() {
             title: t("CokeStudio:LollapaloozaBrazil"),
             text: t("CokeStudio:TheFestivalEnergy"),
             buttonText: t("common:LearnMore"),
-            buttonLink: "#",
+            buttonLink: "coke-studio/lollapalooza-2025",
           },
           {
             bgDesktop: JaoBannerDesktop,
             bgMobile: JaoBannerMobile,
             title: t("CokeStudio:PocketShow"),
             text: t("CokeStudio:ExperienceJao"),
-            buttonText: t("common:LearnMore"),
-            buttonLink: "#",
           },
           {
             bgDesktop: PeggyGouSmilingDesktop,
             bgMobile: PeggyGouSmilingMobile,
             title: t("CokeStudio:LetThePartyBegin"),
             text: t("CokeStudio:ShesPlayBestBeats"),
-            buttonText: t("common:LearnMore"),
-            buttonLink: "#",
           },
           {
             bgDesktop: karolGPosingDesktop,
             bgMobile: karolGPosingMobile,
             title: t("CokeStudio:TurnUpTheVolume"),
             text: t("CokeStudio:StayTuned"),
-            buttonText: t("common:LearnMore"),
-            buttonLink: "#",
           },
           {
             bgDesktop: NewJeansPosingDesktop,
             bgMobile: NewJeansPosingMobile,
             title: t("CokeStudio:NewJeansJoinedTeam"),
             text: t("CokeStudio:NewJeansHasArrived"),
-            buttonText: t("common:LearnMore"),
-            buttonLink: "#",
           },
         ]}
       />
@@ -140,6 +132,7 @@ export default function CokeStudio() {
           alt={t("CokeStudio:PeggyHoldingACoke")}
           flexDirection="flex-row-reverse"
           FirstSectionPadding="pt-10"
+          openInNewTab
         />
         <ComponentDefaultNoTitle
           flexDirection="flex-row-reverse xl:mt-[.5rem]"
@@ -149,6 +142,7 @@ export default function CokeStudio() {
           textButton={t("CokeStudio:IWant")}
           urlImage={PeggyGouWallpaperGeneric}
           alt={t("CokeStudio:PeggyGouPosingForAPhoto")}
+          openInNewTab
         />
         <ComponentDefaultNoTitle
           flexDirection="flex-row xl:mt-[.5rem]"
@@ -158,6 +152,7 @@ export default function CokeStudio() {
           textButton={t("CokeStudio:IWant")}
           urlImage={KarolGWallpaperGeneric}
           alt={t("CokeStudio:KarolGPosing")}
+          openInNewTab
         />
         <ComponentDefaultNoTitle
           flexDirection="flex-row-reverse xl:mt-[.5rem]"
@@ -167,6 +162,7 @@ export default function CokeStudio() {
           textButton={t("CokeStudio:IWant")}
           urlImage={NewJeansAutographGeneric}
           alt={t("CokeStudio:NewJeansPosingForAPhoto")}
+          openInNewTab
         />
       </div>
       <div className="flex flex-col gap-5 justify-center items-center mt-2 xl:mt-5">

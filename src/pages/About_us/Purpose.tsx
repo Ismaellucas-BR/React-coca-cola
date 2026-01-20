@@ -23,7 +23,7 @@ export default function Purpose() {
         </div>
       </div>
 
-      <div className="flex flex-col justify-center w-full lg:mt-20">
+      <div className="flex flex-col justify-center items-center w-full lg:mt-20">
         <SectionFloatContent
           title={t("WhoWeAre")}
           span={t("LearnMoreAboutOur")}

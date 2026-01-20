@@ -4,8 +4,10 @@ import { Link } from "react-router";
 
 import CokeCompanyLogoBlack from "../assets/CokeCompanyLogoBlack.webp";
 import LanguageSwitcher from "./translation/LanguageSwitcher";
+import { useTranslation } from "react-i18next";
 
 export default function Header() {
+  const { t } = useTranslation("common");
   return (
     <header className="sticky top-0 z-50 bg-white w-full flex justify-center items-center">
       <div className="flex justify-between items-center px-5 w-full xl:max-w-[80rem]">
@@ -19,12 +21,12 @@ export default function Header() {
 
         <ul className="hidden lg:flex justify-center items-center gap-8 font-Noto text-black relative">
           <li className="flex items-center cursor-pointer font-semibold h-14 border-b-4 border-transparent hover:border-black transition-all duration-200">
-            <Link to="/brands">Marcas</Link>
+            <Link to="/brands">{t("Brands")}</Link>
           </li>
           <li className="relative group">
             <div className="flex items-center gap-1 border-b-4 border-transparent group-hover:border-black transition-all duration-200 h-14">
               <span className="font-semibold">
-                <span>Descobrir </span>{" "}
+                <span>{t("Discover")}</span>{" "}
               </span>
               <ChevronRight
                 size={16}
@@ -33,7 +35,7 @@ export default function Header() {
             </div>
             <ul className="absolute left-0 top-12 mt-2 w-60 bg-white shadow-lg p-4 space-y-2 hidden group-hover:block min-w-max rounded-md z-40">
               <li className="flex items-center gap-3 hover:font-semibold cursor-pointer group/item">
-                <Link to="share-a-coke"> Compartilhe uma Coca‑Cola</Link>
+                <Link to="share-a-coke"> {t("ShareACocaCola")}</Link>
                 <div className="hidden group-hover/item:block">
                   <ChevronRight size={16} />
                 </div>
@@ -45,7 +47,7 @@ export default function Header() {
                 </div>
               </li>
               <li className="flex items-center gap-3 hover:font-semibold cursor-pointer group/item3">
-                <Link to="instituto-coca-cola-brasil"> Instituto</Link>
+                <Link to="instituto-coca-cola-brasil"> {t("Institute")}</Link>
                 <div className="hidden group-hover/item3:block">
                   <ChevronRight size={16} />
                 </div>
@@ -53,11 +55,11 @@ export default function Header() {
             </ul>
           </li>
           <li className="flex items-center cursor-pointer font-semibold h-14 border-b-4 border-transparent hover:border-black transition-all duration-200">
-            <Link to="sustainability"> Sustentabilidade</Link>
+            <Link to="sustainability"> {t("Sustainability")}</Link>
           </li>
           <li className="relative group">
             <div className="flex items-center gap-1 border-b-4 border-transparent group-hover:border-black transition-all duration-200 h-14">
-              <span className="font-semibold">Sobre nós</span>
+              <span className="font-semibold">{t("AboutUs")}</span>
               <ChevronRight
                 size={16}
                 className="transition-transform duration-300 group-hover:rotate-90"
@@ -65,7 +67,7 @@ export default function Header() {
             </div>
             <ul className="absolute left-0 top-12 mt-2 w-60 bg-white shadow-lg p-4 space-y-2 hidden group-hover:block min-w-max rounded-md">
               <li className="flex items-center gap-3 hover:font-semibold cursor-pointer group/item">
-                <Link to="/sobre-nos/nos-conheca"> Nos Conheca</Link>
+                <Link to="/sobre-nos/nos-conheca">{t("GetTonowUs")}</Link>
                 <div className="hidden group-hover/item:block">
                   <ChevronRight size={16} />
                 </div>
@@ -73,7 +75,7 @@ export default function Header() {
               <li className="flex items-center gap-3 hover:font-semibold cursor-pointer group/item2">
                 <Link to="/sobre-nos/proposito-e-visao">
                   {" "}
-                  Propósito e Visão
+                  {t("PurposeAndVision")}
                 </Link>
                 <div className="hidden group-hover/item2:block">
                   <ChevronRight size={16} />

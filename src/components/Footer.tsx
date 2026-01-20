@@ -2,7 +2,10 @@ import { GithubLogo } from "@phosphor-icons/react";
 import { SquareArrowOutUpRight } from "lucide-react";
 import { Link } from "react-router";
 import LogoWhiteLarge from "../assets/LogoWhiteLarge.webp";
+import { useTranslation } from "react-i18next";
+import LanguageSwitcher from "./translation/LanguageSwitcher";
 export default function Footer() {
+  const { t } = useTranslation("common");
   return (
     <section className="flex flex-col justify-center items-center bg-black  w-full py-12 ">
       <div className="xl:max-w-[70rem] w-full max-w-[90%]">
@@ -12,15 +15,60 @@ export default function Footer() {
             className="w-[249px] h-[40px]"
             alt="Logo coca-cola branco"
           />
-          <span className="text-white">Brasil</span>
         </div>
         <div className="flex flex-col justify-start items-baseline text-left w-full py-5">
           <h2 className="title-section text-white! text-xl!">Links úteis</h2>
-          <ul>
+          <ul className="flex flex-col gap-3 mt-3">
             <li>
-              <Link className="text-white font-Noto text-sm" to="/coke-studio">
+              <Link className="text-white font-Noto text-sm" to="brands">
+                {t("Brands")}
+              </Link>
+            </li>
+            <li>
+              <Link className="text-white font-Noto text-sm" to="share-a-coke">
+                {t("ShareACocaCola")}
+              </Link>
+            </li>
+            <li>
+              <Link className="text-white font-Noto text-sm" to="coke-studio">
                 Coke Studio
               </Link>
+            </li>
+            <li>
+              <Link
+                className="text-white font-Noto text-sm"
+                to="instituto-coca-cola-brasil">
+                {t("Institute")}
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="text-white font-Noto text-sm"
+                to="sustainability">
+                {t("Sustainability")}
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="text-white font-Noto text-sm"
+                to="/sobre-nos/nos-conheca">
+                {t("GetTonowUs")}
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="text-white font-Noto text-sm"
+                to="/sobre-nos/proposito-e-visao">
+                {t("PurposeAndVision")}
+              </Link>
+            </li>
+            <li>
+              <Link className="text-white font-Noto text-sm" to="brands/sprite">
+                Sprite
+              </Link>
+            </li>
+            <li className="mt-3">
+              <LanguageSwitcher />
             </li>
           </ul>
         </div>
